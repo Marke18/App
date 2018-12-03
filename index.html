@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>App</title>
+  </head>
+  <body>
+    <div id="app">
+
+      <navbar-area-pubblica v-show="pagina === 'NavbarAreaPubblica'"></navbar-area-pubblica>
+      <navbar-area-privata v-show="pagina === 'NavbarAreaPrivata'"></navbar-area-ptivata>
+
+      <div id="" style="border: 2px solid black;margin: 1.5vh;height: 80vh;">
+
+
+
+      </div>
+      <p id="footer" :style="Style">{{link}}</p>
+    </div>
+  </body>
+</html>
