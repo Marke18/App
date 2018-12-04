@@ -7,35 +7,45 @@
 
     <b-navbar toggleable="md" type="light" variant="faded">
 
-      <b-navbar-brand>
+      <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
+
+      <b-navbar-brand href="#">
         <img src="https://placekitten.com/g/30/30" class="d-inline-block align-top" alt="BV">
       </b-navbar-brand>
 
-      <b-navbar-brand href="#">
-        PANORAMICA
-      </b-navbar-brand>
+      <b-collapse is-nav id="nav_collapse">
 
-      <b-navbar-brand href="#">
-        CREDITO RESIDUO/RICARICA
-      </b-navbar-brand>
+        <b-navbar-nav>
 
-      <b-navbar-brand href="#">
-        STATISTICHE
-      </b-navbar-brand>
+          <b-nav-item href="#">
+            PANORAMICA
+          </b-nav-item>
 
-      <b-navbar-brand href="#">
-        ELENCO STAZIONI
-      </b-navbar-brand>
+          <b-nav-item href="#">
+            CREDITO RESIDUO/RICARICA
+          </b-nav-item>
 
-      <b-navbar-brand href="#">
-        Profilo utente
-        <img src="https://placekitten.com/g/30/30" class="d-inline-block align-top" alt="BV">
-      </b-navbar-brand>
+          <b-nav-item href="#">
+            STATISTICHE
+          </b-nav-item>
 
-      <b-navbar-brand href="#">
-        Esci
-        <img src="https://placekitten.com/g/30/30" class="d-inline-block align-top" alt="BV">
-      </b-navbar-brand>
+          <b-nav-item href="#">
+            ELENCO STAZIONI
+          </b-nav-item>
+
+          <b-nav-item href="#">
+            Profilo utente
+            <img src="https://placekitten.com/g/30/30" class="d-inline-block align-top" alt="BV">
+          </b-nav-item>
+
+          <b-nav-item href="#" @click="navbarPubblica()">
+            Esci
+            <img src="https://placekitten.com/g/30/30" class="d-inline-block align-top" alt="BV">
+          </b-nav-item>
+
+        </b-navbar-nav>
+
+      </b-collapse>
 
     </b-navbar>
 
@@ -47,7 +57,12 @@
 <script>
 
 export default {
-  name: 'NavbarAreaPrivata'
+  name: 'NavbarAreaPrivata',
+  methods: {
+    navbarPubblica () {
+      window.app.navbar = 'Pubblica'
+    }
+  }
 }
 
 </script>

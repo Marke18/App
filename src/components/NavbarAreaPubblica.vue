@@ -7,7 +7,7 @@
 
     <b-navbar toggleable="md" type="light" variant="faded">
 
-      <b-navbar-brand>
+      <b-navbar-brand href="#" @click="bodyHome()">
         <img src="https://placekitten.com/g/30/30" class="d-inline-block align-top" alt="BV">
         Home
       </b-navbar-brand>
@@ -16,12 +16,12 @@
         Elenco gestori
       </b-navbar-brand>
 
-      <b-navbar-brand href="#">
+      <b-navbar-brand href="#" @click="bodyRegistrati()" >
         Registrati
         <img src="https://placekitten.com/g/30/30" class="d-inline-block align-top" alt="BV">
       </b-navbar-brand>
 
-      <b-navbar-brand href="#">
+      <b-navbar-brand href="#" @click="navbarPrivata()">
         Accedi
         <img src="https://placekitten.com/g/30/30" class="d-inline-block align-top" alt="BV">
       </b-navbar-brand>
@@ -36,7 +36,18 @@
 <script>
 
 export default {
-  name: 'NavbarAreaPubblica'
+  name: 'NavbarAreaPubblica',
+  methods: {
+    navbarPrivata () {
+      window.app.navbar = 'Privata'
+    },
+    bodyHome () {
+      window.app.body = 'Home'
+    },
+    bodyRegistrati () {
+      window.app.body = 'Registrati'
+    }
+  }
 }
 
 </script>

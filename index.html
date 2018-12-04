@@ -8,14 +8,15 @@
   <body>
     <div id="app">
 
-      <navbar-area-pubblica v-show="pagina === 'NavbarAreaPubblica'"></navbar-area-pubblica>
-      <navbar-area-privata v-show="pagina === 'NavbarAreaPrivata'"></navbar-area-ptivata>
+      <navbar-area-pubblica v-show="navbar === 'Pubblica'"></navbar-area-pubblica>
+      <navbar-area-privata v-show="navbar === 'Privata'"></navbar-area-privata>
 
       <div id="" style="border: 2px solid black;margin: 1.5vh;height: 80vh;">
-
-
+        <home v-show="body === 'Home'"></home>
+        <registrati v-show="body === 'Registrati'"></registrati>
 
       </div>
+
       <p id="footer" :style="Style">{{link}}</p>
     </div>
   </body>

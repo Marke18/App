@@ -11,6 +11,8 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 
 import NavbarAreaPubblica from './components/NavbarAreaPubblica.vue'
 import NavbarAreaPrivata from './components/NavbarAreaPrivata.vue'
+import Home from './components/Home.vue'
+import Registrati from './components/Registrati.vue'
 
 Vue.use(BootstrapVue)
 
@@ -18,6 +20,8 @@ Vue.config.productionTip = false
 
 Vue.component('navbar-area-pubblica', NavbarAreaPubblica)
 Vue.component('navbar-area-privata', NavbarAreaPrivata)
+Vue.component('home', Home)
+Vue.component('registrati', Registrati)
 
 /* eslint-disable no-new */
 
@@ -35,9 +39,13 @@ new Vue({
     }
   }
 })
- var app = new Vue({
-   el: '#app',
-   data: {
-     pagina: 'NavbarAreaPubblica'
-   }
- })
+
+// eslint-disable-next-line
+window.app = new Vue({
+  el: '#app',
+  data: {
+    navbar: 'Pubblica',
+    body: 'Home',
+    user: ''
+  }
+})
