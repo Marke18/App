@@ -8,16 +8,21 @@
   <body>
     <div id="app">
 
-      <navbar-area-pubblica v-show="navbar === 'Pubblica'"></navbar-area-pubblica>
-      <navbar-area-privata v-show="navbar === 'Privata'"></navbar-area-privata>
+      <navbar-area-pubblica v-show="user === ''"></navbar-area-pubblica>
+      <navbar-area-privata v-show="user !== ''"></navbar-area-privata>
 
-      <div id="" style="border: 2px solid black;margin: 1.5vh;height: 80vh;">
+      <div style="border: 2px solid black; margin: 1.5vh; height: 80vh; overflow: scroll;">
+
         <home v-show="body === 'Home'"></home>
+
         <registrati v-show="body === 'Registrati'"></registrati>
 
-      </div>
+        <accedi v-show="body === 'Accedi'"></accedi>
 
-      <p id="footer" :style="Style">{{link}}</p>
+        <elenco-gestori :managers="managers" v-show="body === 'ElencoGestori'"></elenco-gestori>
+
+      </div>
     </div>
+    <p id="footer" :style="Style">{{link}}</p>
   </body>
 </html>

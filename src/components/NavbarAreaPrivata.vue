@@ -1,16 +1,16 @@
 <template>
 
 <div class="head">
-  <div style="height: 7.5vh;">
+  <div style="height: 2.5vh;">
   </div>
   <div style="height: 5vh;">
 
-    <b-navbar toggleable="md" type="light" variant="faded">
+    <b-navbar toggleable="xs" type="light" variant="faded">
 
       <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
 
       <b-navbar-brand href="#">
-        <img src="https://placekitten.com/g/30/30" class="d-inline-block align-top" alt="BV">
+        <img src="../assets/home.jpg" width="30" height="30" alt="BV">
       </b-navbar-brand>
 
       <b-collapse is-nav id="nav_collapse">
@@ -70,7 +70,9 @@ export default {
 <style>
 
   .head {
-    height: 12.5vh;
+    min-height: 30px;
+    height: 12vh;
+    max-height: 80px;
     margin: 0;
   }
 
