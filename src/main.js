@@ -13,14 +13,17 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 import NavbarAreaPubblica from './components/NavbarAreaPubblica.vue'
 import NavbarAreaPrivata from './components/NavbarAreaPrivata.vue'
 
-// Area Privata
+// Area Pubblica
 import Home from './components/Home.vue'
 import Registrati from './components/Registrati.vue'
 import Accedi from './components/Accedi.vue'
 import ElencoGestori from './components/ElencoGestori.vue'
 import Manager from './components/ElencoGestori2.vue'
 
-// Area Pubblica
+// Area Privata
+import Profilo from './components/Profilo.vue'
+import Credito from './components/Credito.vue'
+import Statistiche from './components/Statistiche.vue'
 
 Vue.use(BootstrapVue)
 
@@ -30,14 +33,17 @@ Vue.config.productionTip = false
 Vue.component('navbar-area-pubblica', NavbarAreaPubblica)
 Vue.component('navbar-area-privata', NavbarAreaPrivata)
 
-// Area Privata
+// Area Pubblica
 Vue.component('home', Home)
 Vue.component('registrati', Registrati)
 Vue.component('accedi', Accedi)
 Vue.component('elenco-gestori', ElencoGestori)
 Vue.component('manager', Manager)
 
-// Area Pubblica
+// Area Privata
+Vue.component('profilo', Profilo)
+Vue.component('credito', Credito)
+Vue.component('statistiche', Statistiche)
 
 /* eslint-disable no-new */
 new Vue({
@@ -60,14 +66,14 @@ new Vue({
 window.app = new Vue({
   el: '#app',
   data: {
-    body: '',
-    user: '',
+    body: 'Home',
+    user: 'abba',
     managers: [
-      {id: 0, nome: 'TUC', stazioni: 2, ricaricaBike: 2, ricaricaCar: 2},
-      {id: 1, nome: 'TUC2', stazioni: 22, ricaricaBike: 22, ricaricaCar: 22},
-      {id: 1, nome: 'TUC2', stazioni: 22, ricaricaBike: 22, ricaricaCar: 22},
-      {id: 1, nome: 'TUC2', stazioni: 22, ricaricaBike: 22, ricaricaCar: 22},
-      {id: 1, nome: 'TUC2', stazioni: 22, ricaricaBike: 22, ricaricaCar: 22}
+      {nome: 'TUC', stazioni: 2, ricaricaBike: 2, ricaricaCar: 2},
+      {nome: 'TUC2', stazioni: 22, ricaricaBike: 22, ricaricaCar: 22},
+      {nome: 'TUC2', stazioni: 22, ricaricaBike: 22, ricaricaCar: 22},
+      {nome: 'TUC2', stazioni: 22, ricaricaBike: 22, ricaricaCar: 22},
+      {nome: 'TUC2', stazioni: 22, ricaricaBike: 22, ricaricaCar: 22}
     ]
   }
 })

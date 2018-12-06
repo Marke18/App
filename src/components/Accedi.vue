@@ -8,9 +8,9 @@
     <b-button type="submit">Accedi</b-button>
   </b-form>
   <div style="text-align:left;margin-top:5vh;">
-    <b-btn @click="Recupera()" variant="link">Recupera username e password</b-btn>
+    <b-btn @click="Recupera()" variant="link" style="font-size: 13px;">Recupera username e password</b-btn>
     <br>
-    <b-btn @click="Registrati()" variant="link">Non sei ancora registrato</b-btn>
+    <b-btn @click="Registrati()" variant="link" style="font-size: 13px;">Non sei ancora registrato</b-btn>
   </div>
 </div>
 

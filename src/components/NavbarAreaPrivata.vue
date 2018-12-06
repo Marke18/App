@@ -9,7 +9,7 @@
 
       <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
 
-      <b-navbar-brand href="#">
+      <b-navbar-brand href="#" @click="BodyHome()">
         <img src="../assets/home.jpg" width="30" height="30" alt="BV">
       </b-navbar-brand>
 
@@ -17,30 +17,30 @@
 
         <b-navbar-nav>
 
-          <b-nav-item href="#">
+          <b-nav-item href="#" @click="Panoramica()">
             PANORAMICA
           </b-nav-item>
 
-          <b-nav-item href="#">
+          <b-nav-item href="#" @click="Credito()">
             CREDITO RESIDUO/RICARICA
           </b-nav-item>
 
-          <b-nav-item href="#">
+          <b-nav-item href="#" @click="Statistiche()">
             STATISTICHE
           </b-nav-item>
 
-          <b-nav-item href="#">
+          <b-nav-item href="#" @click="ElencoStazioni()">
             ELENCO STAZIONI
           </b-nav-item>
 
-          <b-nav-item href="#">
+          <b-nav-item href="#" @click="Profilo()">
             Profilo utente
-            <img src="https://placekitten.com/g/30/30" class="d-inline-block align-top" alt="BV">
+              <img src="../assets/home.jpg" width="30" height="30" alt="BV">
           </b-nav-item>
 
           <b-nav-item href="#" @click="navbarPubblica()">
             Esci
-            <img src="https://placekitten.com/g/30/30" class="d-inline-block align-top" alt="BV">
+              <img src="../assets/home.jpg" width="30" height="30" alt="BV">
           </b-nav-item>
 
         </b-navbar-nav>
@@ -60,7 +60,26 @@ export default {
   name: 'NavbarAreaPrivata',
   methods: {
     navbarPubblica () {
-      window.app.navbar = 'Pubblica'
+      window.app.user = ''
+      window.app.body = 'Home'
+    },
+    Profilo () {
+      window.app.body = 'Profilo'
+    },
+    ElencoStazioni () {
+      window.app.body = 'ElencoStazioni'
+    },
+    Statistiche () {
+      window.app.body = 'Statistiche'
+    },
+    Credito () {
+      window.app.body = 'Credito'
+    },
+    Panoramica () {
+      window.app.body = 'Panoramica'
+    },
+    BodyHome () {
+      window.app.body = 'Home'
     }
   }
 }

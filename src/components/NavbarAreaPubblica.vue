@@ -18,7 +18,7 @@
 
           <b-nav-item href="#" @click="Accedi()">
             Accedi
-            <img src="https://placekitten.com/g/30/30" class="d-inline-block align-top" alt="BV">
+            <img src="../assets/home.jpg" width="30" height="30" alt="BV">
           </b-nav-item>
 
           <b-nav-item href="#" @click="ElencoGestori()">
@@ -27,7 +27,7 @@
 
           <b-nav-item href="#" @click="bodyRegistrati()">
             Registrati
-            <img src="https://placekitten.com/g/30/30" class="d-inline-block align-top" alt="BV">
+            <img src="../assets/home.jpg" width="30" height="30" alt="BV">
           </b-nav-item>
 
         </b-navbar-nav>

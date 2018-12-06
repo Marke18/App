@@ -32,7 +32,7 @@ export default {
 <style scoped>
 
 span {
-  font-size: 10px;
+  font-size: 12px;
 }
 
 </style>

@@ -7,7 +7,7 @@
 
     <b-form-input class="input" v-model="account.nome" placeholder="Inserisci il tuo nome" type="text" required></b-form-input>
     <b-form-input class="input" v-model="account.cognome" placeholder="Inserisci il tuo cognome" type="text" required></b-form-input>
-    <b-form-input class="input" v-model="account.dataNascita" placeholder="Inserisci la tua data di nascita" type="date" required></b-form-input>
+    <b-form-input class="input form-control" v-model="account.dataNascita" placeholder="Inserisci la tua data di nascita" type="date" required></b-form-input>
     <b-form-input class="input" v-model="account.luogoNascita" placeholder="Inserisci il tuo luogo di nascita" type="text" required></b-form-input>
     <b-form-input class="input" v-model="account.cf" placeholder="Inserisci il tuo codice fiscale" type="text" required></b-form-input>
     <b-form-select class="mb-3 input" v-model="account.tipoDoc" :options="options" required/>
@@ -50,6 +50,7 @@
     <h1 style="margin: 5vh 0;">Registrazione completata</h1>
     <p style="margin-top:20vh;">
       Grazie {{account.nome}} {{account.cognome}}, la tua registrazione è stata completata con successo!<br>
+      <img src="../assets/home.jpg" width="30" height="30" alt="BV"><br>
       A breve riceverai un e-mail di conferma.
     </p>
     <div class="text-center" style="margin: auto;">
@@ -103,7 +104,6 @@ export default {
   },
   methods: {
     creaAccount () {
-      window.app.user = this.account.username
       this.show = false
     },
     onSubmit (evt) {
