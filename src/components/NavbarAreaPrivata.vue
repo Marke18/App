@@ -69,6 +69,7 @@ export default {
     },
     ElencoStazioni () {
       window.app.body = 'ElencoStazioni'
+      window.app.nomeGestore = ''
     },
     Statistiche () {
       window.app.body = 'Statistiche'

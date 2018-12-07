@@ -58,6 +58,7 @@ export default {
     },
     ElencoGestori () {
       window.app.body = 'ElencoGestori'
+      window.app.nomeGestore = ''
     }
   }
 }

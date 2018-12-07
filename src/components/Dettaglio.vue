@@ -18,7 +18,7 @@
       <span v-if="stationD.postiDisp > 0">{{stationD.postiDisp}}<br></span>
       <span v-if="stationD.ebike > 0">{{stationD.ebike}}<br></span>
     </div>
-    
+
 <!-- Non funge
 
     <b-btn style="text-align: center;" @click="Login()" v-if="window.app.user === ''">Login</b-btn>
