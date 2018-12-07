@@ -1,6 +1,6 @@
 <template>
 
-  <div>
+  <div @click="Gestore()">
     <div style="width:25%;float:left;margin: 2vh 0">
       <img src="https://placekitten.com/g/30/30" class="d-inline-block align-top" style="margin-top:50%;" alt="BV">
     </div>
@@ -24,7 +24,13 @@
 
 export default {
   name: 'Manager',
-  props: ['manager']
+  props: ['manager'],
+  methods: {
+    Gestore () {
+      console.log('ciaooo')
+      window.app.nomeGestore = this.manager.nome
+    }
+  }
 }
 
 </script>

@@ -62,6 +62,7 @@ export default {
     navbarPubblica () {
       window.app.user = ''
       window.app.body = 'Home'
+      window.app.nomeGestore = ''
     },
     Profilo () {
       window.app.body = 'Profilo'

@@ -21,7 +21,9 @@
 
         <accedi v-show="body === 'Accedi'"></accedi>
 
-        <elenco-gestori :managers="managers" v-show="body === 'ElencoGestori'"></elenco-gestori>
+        <elenco-gestori :managers="managers" :indiceStazione.sync="indiceStazione" v-show="body === 'ElencoGestori'"></elenco-gestori>
+
+        <elenco-stazioni :stations="stations[indiceStazione]" v-show="body === 'ElencoStazioni'"></elenco-stazioni>
 
         <!-- Area Privata -->
         <profilo :account="account" v-show="body === 'Profilo'"></profilo>
@@ -29,7 +31,7 @@
         <credito :credito.sync="account.credito" v-show="body === 'Credito'"></credito>
 
         <statistiche :movements="movements" :recharges="recharges" v-show="body === 'Statistiche'"></statistiche>
-
+        
       </div>
     </div>
     <p id="footer" :style="Style">{{link}}</p>

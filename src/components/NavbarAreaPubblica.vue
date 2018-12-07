@@ -51,6 +51,7 @@ export default {
     },
     bodyHome () {
       window.app.body = 'Home'
+      window.app.nomeGestore = ''
     },
     bodyRegistrati () {
       window.app.body = 'Registrati'

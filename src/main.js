@@ -19,6 +19,8 @@ import Registrati from './components/Registrati.vue'
 import Accedi from './components/Accedi.vue'
 import ElencoGestori from './components/ElencoGestori.vue'
 import Manager from './components/ElencoGestori2.vue'
+import ElencoStazioni from './components/ElencoStazioni.vue'
+import Station from './components/ElencoStazioni2.vue'
 
 // Area Privata
 import Profilo from './components/Profilo.vue'
@@ -41,6 +43,8 @@ Vue.component('registrati', Registrati)
 Vue.component('accedi', Accedi)
 Vue.component('elenco-gestori', ElencoGestori)
 Vue.component('manager', Manager)
+Vue.component('elenco-stazioni', ElencoStazioni)
+Vue.component('station', Station)
 
 // Area Privata
 Vue.component('profilo', Profilo)
@@ -71,7 +75,7 @@ window.app = new Vue({
   el: '#app',
   data: {
     body: 'Home',
-    user: 'abba',
+    user: '',
     account: {
       nome: 'asdasdad',
       cognome: 'dasdasd',
@@ -90,9 +94,20 @@ window.app = new Vue({
       password: 'asdasda',
       credito: 10
     },
+    nomeGestore: '',
     managers: [
       {nome: 'TUC', stazioni: 2, ricaricaBike: 2, ricaricaCar: 2},
       {nome: 'TUC2', stazioni: 22, ricaricaBike: 22, ricaricaCar: 22}
+    ],
+    stations: [
+      [
+        {nomeG: 'TUC', nomeST: 'abba', ciclo: 'as', via: 'ds', postiTot: 2, postiDisp: 1, ebike: 2},
+        {nomeG: 'TUC', nomeST: 'assa', ciclo: 'sa', via: 'sa', postiTot: 3, postiDisp: 0, ebike: 3}
+      ],
+      [
+        {nomeG: 'TUC2', nomeST: 'abba2', ciclo: 'as', via: 'ds', postiTot: 2, postiDisp: 1, ebike: 2},
+        {nomeG: 'TUC2', nomeST: 'assa2', ciclo: 'sa', via: 'sa', postiTot: 3, postiDisp: 0, ebike: 3}
+      ]
     ],
     movements: [
       {servizio: 'a', id_prenotazione: 'a', data: 'a', oraIn: 'a', oraFin: 'a', prelievo: 'a', consegna: 'a', costo: 'a'},
@@ -102,5 +117,16 @@ window.app = new Vue({
       {id_prenotazione: 'a', taglio: 'a', data: 'a', ora: '12:00', circuito: 'a'},
       {id_prenotazione: 'a', taglio: 'a', data: 'a', ora: '12:00', circuito: 'c'}
     ]
+  },
+  computed: {
+    indiceStazione () {
+      var i
+      for (i = 0; i < this.stations.length; i++) {
+        if (this.nomeGestore === this.stations[i][0].nomeG) {
+          this.body = 'ElencoStazioni'
+          return i
+        }
+      }
+    }
   }
 })
