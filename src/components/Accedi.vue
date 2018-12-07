@@ -30,6 +30,7 @@ export default {
     bodyHome () {
       window.app.body = 'Home'
       window.app.user = this.username
+      window.app.nomeGestore = ''
     },
     Registrati () {
       window.app.body = 'Registrati'

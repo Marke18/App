@@ -27,7 +27,6 @@ export default {
   props: ['manager'],
   methods: {
     Gestore () {
-      console.log('ciaooo')
       window.app.nomeGestore = this.manager.nome
     }
   }

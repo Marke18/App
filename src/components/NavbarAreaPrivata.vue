@@ -9,7 +9,7 @@
 
       <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
 
-      <b-navbar-brand href="#" @click="BodyHome()">
+      <b-navbar-brand href="#" @click="Panoramica()">
         <img src="../assets/home.jpg" width="30" height="30" alt="BV">
       </b-navbar-brand>
 
@@ -77,10 +77,8 @@ export default {
       window.app.body = 'Credito'
     },
     Panoramica () {
-      window.app.body = 'Panoramica'
-    },
-    BodyHome () {
       window.app.body = 'Home'
+      window.app.nomeGestore = ''
     }
   }
 }

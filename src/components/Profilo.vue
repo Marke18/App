@@ -28,7 +28,7 @@
     <span class="right">{{account.cf}}</span><br>
   </div>
   <div class="height-s">
-    <span class="left">Tipo di dcoumento d'identità</span>
+    <span class="left">Tipo di documento d'identità</span>
     <span class="right">{{account.tipoDoc}}</span><br>
   </div>
   <div class="height-s">
@@ -49,8 +49,8 @@
   </div>
 
   <div>
-    <span class="left" style="margin-top:5vh;">Credito</span>
-    <span class="right" style="margin-top:5vh;font-weight:bold;border: 0">{{account.credito}}</span>
+    <span class="left" style="margin-top:5vh;">Credito residuo</span>
+    <span class="right" style="margin-top:5vh;font-weight:bold;border: 0">{{account.credito}}€</span>
   </div>
 
 </div>

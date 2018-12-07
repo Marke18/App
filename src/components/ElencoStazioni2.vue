@@ -1,6 +1,7 @@
 <template>
 
-  <div>
+<div>
+  <div @click="Stazione()">
     <div style="width:25%;float:left;margin: 2vh 0">
       <img src="https://placekitten.com/g/30/30" class="d-inline-block align-top" style="margin-top:50%;" alt="BV">
     </div>
@@ -17,6 +18,7 @@
       <span v-if="station.ebike > 0">{{station.ebike}}<br></span>
     </div>
   </div>
+</div>
 
 </template>
 
@@ -24,7 +26,13 @@
 
 export default {
   name: 'Station',
-  props: ['station']
+  props: ['station'],
+  methods: {
+    Stazione () {
+      window.app.stationD = this.station
+      window.app.body = 'Dettaglio'
+    }
+  }
 }
 
 </script>

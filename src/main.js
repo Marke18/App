@@ -12,6 +12,7 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 // Menu
 import NavbarAreaPubblica from './components/NavbarAreaPubblica.vue'
 import NavbarAreaPrivata from './components/NavbarAreaPrivata.vue'
+import NavbarTorna from './components/NavbarTorna.vue'
 
 // Area Pubblica
 import Home from './components/Home.vue'
@@ -21,6 +22,7 @@ import ElencoGestori from './components/ElencoGestori.vue'
 import Manager from './components/ElencoGestori2.vue'
 import ElencoStazioni from './components/ElencoStazioni.vue'
 import Station from './components/ElencoStazioni2.vue'
+import Dettaglio from './components/Dettaglio.vue'
 
 // Area Privata
 import Profilo from './components/Profilo.vue'
@@ -36,6 +38,7 @@ Vue.config.productionTip = false
 // Menu
 Vue.component('navbar-area-pubblica', NavbarAreaPubblica)
 Vue.component('navbar-area-privata', NavbarAreaPrivata)
+Vue.component('navbar-torna', NavbarTorna)
 
 // Area Pubblica
 Vue.component('home', Home)
@@ -45,6 +48,7 @@ Vue.component('elenco-gestori', ElencoGestori)
 Vue.component('manager', Manager)
 Vue.component('elenco-stazioni', ElencoStazioni)
 Vue.component('station', Station)
+Vue.component('dettaglio', Dettaglio)
 
 // Area Privata
 Vue.component('profilo', Profilo)
@@ -95,6 +99,15 @@ window.app = new Vue({
       credito: 10
     },
     nomeGestore: '',
+    stationD: {
+      nomeG: '',
+      nomeST: '',
+      ciclo: '',
+      via: '',
+      postiTot: 0,
+      postiDisp: 0,
+      ebike: 0
+    },
     managers: [
       {nome: 'TUC', stazioni: 2, ricaricaBike: 2, ricaricaCar: 2},
       {nome: 'TUC2', stazioni: 22, ricaricaBike: 22, ricaricaCar: 22}
@@ -123,7 +136,10 @@ window.app = new Vue({
       var i
       for (i = 0; i < this.stations.length; i++) {
         if (this.nomeGestore === this.stations[i][0].nomeG) {
+          // eslint-disable-next-line
           this.body = 'ElencoStazioni'
+          // eslint-disable-next-line
+          this.indiceStazione = i
           return i
         }
       }
