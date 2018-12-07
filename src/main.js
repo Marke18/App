@@ -24,6 +24,8 @@ import Manager from './components/ElencoGestori2.vue'
 import Profilo from './components/Profilo.vue'
 import Credito from './components/Credito.vue'
 import Statistiche from './components/Statistiche.vue'
+import Movement from './components/Movimenti(Statistiche).vue'
+import Recharge from './components/Ricariche(Statistiche).vue'
 
 Vue.use(BootstrapVue)
 
@@ -44,6 +46,8 @@ Vue.component('manager', Manager)
 Vue.component('profilo', Profilo)
 Vue.component('credito', Credito)
 Vue.component('statistiche', Statistiche)
+Vue.component('movement', Movement)
+Vue.component('recharge', Recharge)
 
 /* eslint-disable no-new */
 new Vue({
@@ -68,12 +72,35 @@ window.app = new Vue({
   data: {
     body: 'Home',
     user: 'abba',
+    account: {
+      nome: 'asdasdad',
+      cognome: 'dasdasd',
+      dataNascita: 'dasdasdasd',
+      luogoNascita: 'dsadsa',
+      nazionalita: 'ita',
+      cf: 'dasdasdas',
+      tipoDoc: 'PayPal',
+      nDoc: 'dasdasdas',
+      indResidenza: 'asdasdasd',
+      cell: '312312312',
+      email: 'lollo@i.i',
+      gestore: 'Gestore1',
+      contratto: 'Contratto1',
+      username: 'abba',
+      password: 'asdasda',
+      credito: 10
+    },
     managers: [
       {nome: 'TUC', stazioni: 2, ricaricaBike: 2, ricaricaCar: 2},
-      {nome: 'TUC2', stazioni: 22, ricaricaBike: 22, ricaricaCar: 22},
-      {nome: 'TUC2', stazioni: 22, ricaricaBike: 22, ricaricaCar: 22},
-      {nome: 'TUC2', stazioni: 22, ricaricaBike: 22, ricaricaCar: 22},
       {nome: 'TUC2', stazioni: 22, ricaricaBike: 22, ricaricaCar: 22}
+    ],
+    movements: [
+      {servizio: 'a', id_prenotazione: 'a', data: 'a', oraIn: 'a', oraFin: 'a', prelievo: 'a', consegna: 'a', costo: 'a'},
+      {servizio: 'a', id_prenotazione: 'a', data: 'a', oraIn: 'a', oraFin: 'a', prelievo: 'a', consegna: 'a', costo: 'b'}
+    ],
+    recharges: [
+      {id_prenotazione: 'a', taglio: 'a', data: 'a', ora: '12:00', circuito: 'a'},
+      {id_prenotazione: 'a', taglio: 'a', data: 'a', ora: '12:00', circuito: 'c'}
     ]
   }
 })

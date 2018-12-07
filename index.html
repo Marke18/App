@@ -7,7 +7,7 @@
   </head>
   <body>
     <div id="app">
-      
+
       <!-- Menu -->
       <navbar-area-pubblica v-show="user === ''"></navbar-area-pubblica>
       <navbar-area-privata v-show="user !== ''"></navbar-area-privata>
@@ -24,11 +24,11 @@
         <elenco-gestori :managers="managers" v-show="body === 'ElencoGestori'"></elenco-gestori>
 
         <!-- Area Privata -->
-        <profilo v-show="body === 'Profilo'"></profilo>
+        <profilo :account="account" v-show="body === 'Profilo'"></profilo>
 
-        <credito v-show="body === 'Credito'"></credito>
+        <credito :credito.sync="account.credito" v-show="body === 'Credito'"></credito>
 
-        <statistiche v-show="body === 'Statistiche'"></statistiche>
+        <statistiche :movements="movements" :recharges="recharges" v-show="body === 'Statistiche'"></statistiche>
 
       </div>
     </div>

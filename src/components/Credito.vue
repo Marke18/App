@@ -5,7 +5,7 @@
     <span class="tit">Credito residuo</span>
     <span class="prz">€ {{credito}}</span>
   </div>
-  <b-form @submit="onSubmit">
+  <b-form @submit="updateCredito">
     <div style="margin-top: 25vh">
       <span><strong>Ricarica il tuo credito <img src="../assets/home.jpg" width="30" height="30" alt="BV"></strong></span>
     </div>
@@ -29,12 +29,12 @@
 <script>
 
 export default {
-  name: 'Profilo',
+  name: 'Credito',
+  props: ['credito'],
   data () {
     return {
       metodoPaga: null,
       ricarica: null,
-      credito: 0,
       options: [
         { value: null, text: 'Scegliere il metodo di pagamento', disabled: true },
         { value: 'paypal', text: 'Paypal' }
@@ -46,8 +46,8 @@ export default {
     }
   },
   methods: {
-    onSubmit () {
-      this.credito += this.ricarica
+    updateCredito () {
+      this.$emit('update:credito', this.credito += this.ricarica)
     }
   }
 }
