@@ -33,6 +33,10 @@
             ELENCO STAZIONI
           </b-nav-item>
 
+          <b-nav-item href="#" @click="ElencoGestori()">
+            ELENCO GESTORI
+          </b-nav-item>
+
           <b-nav-item href="#" @click="Profilo()">
             Profilo utente
               <img src="../assets/home.jpg" width="30" height="30" alt="BV">
@@ -79,6 +83,10 @@ export default {
     },
     Panoramica () {
       window.app.body = 'Home'
+      window.app.nomeGestore = ''
+    },
+    ElencoGestori () {
+      window.app.body = 'ElencoGestori'
       window.app.nomeGestore = ''
     }
   }
