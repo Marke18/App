@@ -3,17 +3,17 @@
 <div @click="Stazione()" style="margin: 2vh 0">
   <b-container class="bv-example-row">
     <b-row>
-      <b-col cols="3">
+      <b-col cols="2" style="padding:0;">
         <br>
         <img src="../assets/home.jpg" width="40" height="40" alt="BV">
       </b-col>
-      <b-col cols="7">
+      <b-col cols="8">
         <span>{{station.nomeST}} ({{station.ciclo}})<br></span>
         <span v-if="station.postiTot > 0">POSTI TOTALI <br></span>
         <span v-if="station.postiDisp > 0">POSTI DISPONIBILI <br></span>
         <span v-if="station.ebike > 0">E-BIKE DISPONIBIL <br></span>
       </b-col>
-      <b-col cols="2">
+      <b-col cols="2" style="padding:0;">
         <br>
         <span v-if="station.postiTot > 0">N° {{station.postiTot}}<br></span>
         <span v-if="station.postiDisp > 0">N° {{station.postiDisp}}<br></span>
