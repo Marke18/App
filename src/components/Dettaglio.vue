@@ -3,21 +3,29 @@
 <div class="home">
   <div v-if="!conferma">
     <h1> Dettagli </h1>
-    <div style="width:25%;float:left;margin: 2vh 0">
-      <img src="https://placekitten.com/g/30/30" class="d-inline-block align-top" style="margin-top:50%;" alt="BV">
+    <div style="margin: 2vh 0;">
+      <b-container class="bv-example-row">
+        <b-row>
+          <b-col cols="3">
+            <br>
+            <img src="../assets/home.jpg" width="40" height="40" alt="BV">
+          </b-col>
+          <b-col cols="7">
+            <span>{{stationD.nomeST}} ({{stationD.ciclo}})<br></span>
+            <span v-if="stationD.postiTot > 0">POSTI TOTALI <br></span>
+            <span v-if="stationD.postiDisp > 0">POSTI DISPONIBILI <br></span>
+            <span v-if="stationD.ebike > 0">E-BIKE DISPONIBIL <br></span>
+          </b-col>
+          <b-col cols="2">
+            <br>
+            <span v-if="stationD.postiTot > 0">N° {{stationD.postiTot}}<br></span>
+            <span v-if="stationD.postiDisp > 0">N° {{stationD.postiDisp}}<br></span>
+            <span v-if="stationD.ebike > 0">N° {{stationD.ebike}}<br></span>
+          </b-col>
+        </b-row>
+      </b-container>
     </div>
-    <div style="width:60%;float:left;margin: 2vh 0">
-      <span>{{stationD.nomeST}} ({{stationD.ciclo}})<br></span>
-      <span v-if="stationD.postiTot > 0">POSTI TOTALI <br></span>
-      <span v-if="stationD.postiDisp > 0">POSTI DISPONIBILI <br></span>
-      <span v-if="stationD.ebike > 0">E-BIKE DISPONIBILI <br></span>
-    </div>
-    <div style="width:15%;float:left;margin: 2vh 0">
-      <br>
-      <span v-if="stationD.postiTot > 0">{{stationD.postiTot}}<br></span>
-      <span v-if="stationD.postiDisp > 0">{{stationD.postiDisp}}<br></span>
-      <span v-if="stationD.ebike > 0">{{stationD.ebike}}<br></span>
-    </div>
+
 
 <!-- Non funge
 
@@ -96,6 +104,10 @@ export default {
   width: 90%;
   height: 100%;
   overflow: auto;
+}
+
+span {
+  font-size: 12px;
 }
 
 </style>
