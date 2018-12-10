@@ -18,8 +18,10 @@
 
 export default {
   name: 'NavbarTorna',
+  props: ['body'],
   methods: {
     Torna () {
+      this.$emit('update:body', 'ElencoStazioni')
       window.app.body = 'ElencoStazioni'
     }
   }

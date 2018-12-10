@@ -44,6 +44,7 @@
 
 export default {
   name: 'Accedi',
+  props: ['user', 'body', 'nomeGestore'],
   data () {
     return {
       username: '',
@@ -52,15 +53,15 @@ export default {
   },
   methods: {
     bodyHome () {
-      window.app.body = 'Home'
-      window.app.user = this.username
-      window.app.nomeGestore = ''
+      this.$emit('update:body', 'Home')
+      this.$emit('update:user', this.username)
+      this.$emit('update:nomeGestore', '')
     },
     Registrati () {
-      window.app.body = 'Registrati'
+      this.$emit('update:body', 'Registrati')
     },
     Recupera () {
-      window.app.body = 'Recupera'
+      this.$emit('update:body', 'Recupera')
     }
   }
 }

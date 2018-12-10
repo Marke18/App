@@ -7,13 +7,13 @@
         <br>
         <img src="../assets/home.jpg" width="40" height="40" alt="BV">
       </b-col>
-      <b-col cols="8">
+      <b-col cols="7">
         <span>{{station.nomeST}} ({{station.ciclo}})<br></span>
         <span v-if="station.postiTot > 0">POSTI TOTALI <br></span>
         <span v-if="station.postiDisp > 0">POSTI DISPONIBILI <br></span>
-        <span v-if="station.ebike > 0">E-BIKE DISPONIBIL <br></span>
+        <span v-if="station.ebike > 0">E-BIKE DISPONIBILI <br></span>
       </b-col>
-      <b-col cols="2" style="padding:0;">
+      <b-col cols="3" style="padding:0;">
         <br>
         <span v-if="station.postiTot > 0">N° {{station.postiTot}}<br></span>
         <span v-if="station.postiDisp > 0">N° {{station.postiDisp}}<br></span>

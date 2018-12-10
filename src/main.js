@@ -96,8 +96,9 @@ window.app = new Vue({
       contratto: 'Contratto1',
       username: 'abba',
       password: 'asdasda',
-      credito: 10
+      credito: 0
     },
+    codiceColonna: '1234567890',
     nomeGestore: '',
     stationD: {
       nomeG: '',
@@ -114,8 +115,8 @@ window.app = new Vue({
     ],
     stations: [
       [
-        {nomeG: 'TUC', nomeST: 'abba', ciclo: 'as', via: 'ds', postiTot: 2, postiDisp: 1, ebike: 2},
-        {nomeG: 'TUC', nomeST: 'assa', ciclo: 'sa', via: 'sa', postiTot: 3, postiDisp: 0, ebike: 3}
+        {nomeG: 'TUC', nomeST: 'abba', ciclo: 'as', via: 'ds', postiTot: 2, postiDisp: 1, ebike: 2, preseAuto: 0},
+        {nomeG: 'TUC', nomeST: 'assa', ciclo: 'sa', via: 'sa', postiTot: 3, postiDisp: 0, ebike: 3, preseAuto: 1}
       ],
       [
         {nomeG: 'TUC2', nomeST: 'abba2', ciclo: 'as', via: 'ds', postiTot: 2, postiDisp: 1, ebike: 2},

@@ -62,32 +62,33 @@
 
 export default {
   name: 'NavbarAreaPrivata',
+  props: ['body', 'user', 'nomeGestore'],
   methods: {
     navbarPubblica () {
-      window.app.user = ''
-      window.app.body = 'Home'
-      window.app.nomeGestore = ''
+      this.$emit('update:user', '')
+      this.$emit('update:body', 'Home')
+      this.$emit('update:nomeGestore', '')
     },
     Profilo () {
-      window.app.body = 'Profilo'
+      this.$emit('update:body', 'Profilo')
     },
     ElencoStazioni () {
-      window.app.body = 'ElencoStazioni'
-      window.app.nomeGestore = ''
+      this.$emit('update:body', 'ElencoStazioni')
+      this.$emit('update:nomeGestore', '')
     },
     Statistiche () {
-      window.app.body = 'Statistiche'
+      this.$emit('update:body', 'Statistiche')
     },
     Credito () {
-      window.app.body = 'Credito'
+      this.$emit('update:body', 'Credito')
     },
     Panoramica () {
-      window.app.body = 'Home'
-      window.app.nomeGestore = ''
+      this.$emit('update:body', 'Home')
+      this.$emit('update:nomeGestore', '')
     },
     ElencoGestori () {
-      window.app.body = 'ElencoGestori'
-      window.app.nomeGestore = ''
+      this.$emit('update:body', 'ElencoGestori')
+      this.$emit('update:nomeGestore', '')
     }
   }
 }

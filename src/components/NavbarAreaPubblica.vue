@@ -45,20 +45,21 @@
 
 export default {
   name: 'NavbarAreaPubblica',
+  props: ['user', 'body', 'nomeGestore'],
   methods: {
     Accedi () {
-      window.app.body = 'Accedi'
+      this.$emit('update:body', 'Accedi')
     },
     bodyHome () {
-      window.app.body = 'Home'
-      window.app.nomeGestore = ''
+      this.$emit('update:body', 'Home')
+      this.$emit('update:nomeGestore', '')
     },
     bodyRegistrati () {
-      window.app.body = 'Registrati'
+      this.$emit('update:body', 'Registrati')
     },
     ElencoGestori () {
-      window.app.body = 'ElencoGestori'
-      window.app.nomeGestore = ''
+      this.$emit('update:body', 'ElencoGestori')
+      this.$emit('update:nomeGestore', '')
     }
   }
 }

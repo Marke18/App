@@ -223,6 +223,7 @@
 
 export default {
   name: 'Registrati',
+  props: ['body'],
   data () {
     return {
       account_reg: {
@@ -269,7 +270,7 @@ export default {
       this.creaAccount()
     },
     Accedi () {
-      window.app.body = 'Accedi'
+      this.$emit('update:body', 'Accedi')
     }
   }
 }
