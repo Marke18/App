@@ -1,12 +1,16 @@
 <template>
 
-  <div style="width: 96%;">
-    <span>{{recharge.id_prenotazione}}</span>
-    <span>{{recharge.taglio}}</span>
-    <span>{{recharge.data}}</span>
-    <span>{{recharge.ora}}</span>
-    <span>{{recharge.circuito}}</span>
-  </div>
+<div style="width: 100%;">
+  <b-container class="bv-example-row text-center">
+    <b-row>
+        <b-col><span>{{recharge.id_prenotazione}}</span></b-col>
+        <b-col><span>{{recharge.taglio}}</span></b-col>
+        <b-col><span>{{recharge.data}}</span></b-col>
+        <b-col><span>{{recharge.ora}}</span></b-col>
+        <b-col><span>{{recharge.circuito}}</span></b-col>
+    </b-row>
+  </b-container>
+</div>
 
 </template>
 
@@ -22,8 +26,6 @@ export default {
 <style scoped>
 
 span {
-  width: 20%;
-  float: left;
   text-align: center;
   font-size: 10px;
 }

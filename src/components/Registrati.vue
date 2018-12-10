@@ -204,10 +204,10 @@
   </b-form>
 
   <div class="text-center" style="margin: 2vh;" v-else>
-    <h1 style="margin: 5vh 0;">Registrazione completata</h1>
-    <p style="margin-top:20vh;">
+    <h1 style="margin: 7vh 0;">Registrazione completata</h1>
+    <img src="../assets/home.jpg" width="30" height="30" alt="BV"><br>
+    <p style="margin-top:10vh;">
       Grazie {{account_reg.nome}} {{account_reg.cognome}}, la tua registrazione è stata completata con successo!<br>
-      <img src="../assets/home.jpg" width="30" height="30" alt="BV"><br>
       A breve riceverai un e-mail di conferma.
     </p>
     <div class="text-center" style="margin: auto;">

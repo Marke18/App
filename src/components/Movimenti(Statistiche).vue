@@ -1,15 +1,19 @@
 <template>
 
-  <div style="width: 100%;">
-    <span>{{movement.servizio}}</span>
-    <span>{{movement.id_prenotazione}}</span>
-    <span>{{movement.data}}</span>
-    <span>{{movement.oraIn}}</span>
-    <span>{{movement.oraFin}}</span>
-    <span>{{movement.prelievo}}</span>
-    <span>{{movement.consegna}}</span>
-    <span>{{movement.costo}}</span>
-  </div>
+<div style="width: 100%;">
+  <b-container class="bv-example-row text-center">
+    <b-row>
+        <b-col><span>{{movement.servizio}}</span></b-col>
+        <b-col><span>{{movement.id_prenotazione}}</span></b-col>
+        <b-col><span>{{movement.data}}</span></b-col>
+        <b-col><span>{{movement.oraIn}}</span></b-col>
+        <b-col><span>{{movement.oraFin}}</span></b-col>
+        <b-col><span>{{movement.prelievo}}</span></b-col>
+        <b-col><span>{{movement.consegna}}</span></b-col>
+        <b-col><span>{{movement.costo}}</span></b-col>
+    </b-row>
+  </b-container>
+</div>
 
 </template>
 
@@ -25,8 +29,6 @@ export default {
 <style scoped>
 
 span {
-  width: 12.5%;
-  float:left;
   text-align:center;
   font-size: 10px;
 }

@@ -1,23 +1,39 @@
 <template>
 
 <div class="home">
-  <div style="font-weight: bold;">
-    <span class="tit">Credito residuo</span>
-    <span class="prz">€ {{credito}}</span>
-  </div>
+
   <b-form @submit="updateCredito">
-    <div style="margin-top: 25vh">
-      <span><strong>Ricarica il tuo credito <img src="../assets/home.jpg" width="30" height="30" alt="BV"></strong></span>
+
+    <div style="font-weight: bold;">
+      <b-container class="bv-example-row" style="margin: 6vh 0;">
+        <b-row>
+          <b-col cols="8" style="padding:0">Credito residuo</b-col>
+          <b-col cols="4">€ {{credito}}</b-col>
+        </b-row>
+      </b-container>
+      <span>Ricarica il tuo credito <img src="../assets/home.jpg" width="30" height="30" alt="BV"></span>
     </div>
-    <div style="margin-top: 8vh">
-      <span style="font-size: 12px;">Metodo di pagamento: </span>
-      <b-form-select class="input mb-3" v-model="metodoPaga" :options="options" size="sm" required/>
-    </div>
-    <div style="margin-top: 5vh">
-      <span style="font-size: 12px;margin-top:6rem">Taglio pagamento: </span>
-      <b-form-select class="input mb-3" v-model="ricarica" :options="paga" size="sm" required/>
-    </div>
-    <div style="margin-top: 8vh;text-align:center;">
+    <b-form-group id="metodoPaga"
+                  label="Metodo di pagamento:"
+                  label-for="metodoPagaI">
+      <b-form-select id="metodoPagaI"
+                     class="mb-3 input"
+                     v-model="metodoPaga"
+                     :options="options"
+                     size="sm"
+                     required/>
+    </b-form-group>
+    <b-form-group id="taglioPaga"
+                  label="Taglio pagamento:"
+                  label-for="taglioPagaI">
+      <b-form-select id="taglioPagaI"
+                     class="mb-3 input"
+                     v-model="ricarica"
+                     :options="paga"
+                     size="sm"
+                     required/>
+    </b-form-group>
+    <div style="text-align:center;margin-bottom: 4vh;">
       <b-button type="submit">Conferma</b-button>
     </div>
   </b-form>
@@ -40,7 +56,7 @@ export default {
         { value: 'paypal', text: 'Paypal' }
       ],
       paga: [
-        { value: null, text: 'Scegliere il taglioi pagamento', disabled: true },
+        { value: null, text: 'Scegliere il taglio di pagamento', disabled: true },
         { value: 10, text: '10' }
       ]
     }
@@ -58,27 +74,13 @@ export default {
 
 .home {
   margin: 0 10%;
-  width: 90%;
-  height: 100%;
-  overflow: auto;
+  width: 80%;
 }
 
 .input {
-  width: 30%;
-  position: absolute;
-  right:10%;
+  width: 100%;
   min-height: 40px;
   height: 3vh;
-}
-
-.tit {
-  margin-top: 8vh;
-  float:left;
-}
-
-.prz {
-  margin: 8vh 25% 0 0;
-  float: right;
 }
 
 </style>
