@@ -8,7 +8,11 @@
       <b-container class="bv-example-row">
         <b-row>
 
-          <b-col cols="6">
+          <b-col cols="12" class="text-center">
+            <img src="../assets/home.jpg" width=150 height="150" alt="BV">
+          </b-col>
+
+          <b-col cols="12">
 
             <b-list-group>
 
@@ -38,9 +42,6 @@
 
             </b-list-group>
 
-          </b-col>
-          <b-col cols="6">
-            <img src="../assets/home.jpg" width=100% height="100%" alt="BV">
           </b-col>
         </b-row>
       </b-container>
