@@ -175,8 +175,4 @@ export default {
   padding: 0;
 }
 
-span {
-  font-size: 12px;
-}
-
 </style>
