@@ -1,58 +1,155 @@
 <template>
 
 <div class="home">
-  <p class="tit">Il mio Profilo<img src="../assets/home.jpg" width="30" height="30" alt="BV" style="margin: 0 2vh;"></p>
+  <div style="margin: 0 5%;">
+    <b-form>
+      <h1 class="text-center" style="margin:3vh 0 6vh 0;">
+        Il mio Profilo
+        <img src="../assets/profile.jpg" width="30" height="30" alt="BV">
+      </h1>
 
-  <div class="height-s">
-    <span class="left">Nome</span>
-    <span class="right">{{account.nome}}</span><br>
-  </div>
-  <div class="height-s">
-    <span class="left">Cognome</span>
-    <span class="right">{{account.cognome}}</span><br>
-  </div>
-  <div class="height-s">
-    <span class="left">Data di nascita</span>
-    <span class="right">{{account.dataNascita}}</span><br>
-  </div>
-  <div class="height-s">
-    <span class="left">Luogo di nascita</span>
-    <span class="right">{{account.luogoNascita}}</span><br>
-  </div>
-  <div class="height-s">
-    <span class="left">Nazionalità</span>
-    <span class="right">{{account.nazionalita}}</span><br>
-  </div>
-  <div class="height-s">
-    <span class="left">cf</span>
-    <span class="right">{{account.cf}}</span><br>
-  </div>
-  <div class="height-s">
-    <span class="left">Tipo di documento d'identità</span>
-    <span class="right">{{account.tipoDoc}}</span><br>
-  </div>
-  <div class="height-s">
-    <span class="left">Numero documento d'identità</span>
-    <span class="right">{{account.nDoc}}</span><br>
-  </div>
-  <div class="height-s">
-    <span class="left">Indirizzo di residenza</span>
-    <span class="right">{{account.indResidenza}}</span><br>
-  </div>
-  <div class="height-s">
-    <span class="left">Telefono / Cellulare</span>
-    <span class="right">{{account.cell}}</span><br><br>
-  </div>
-  <div class="height-s">
-    <span class="left">Indirizzo E-mail</span>
-    <span class="right">{{account.email}}</span><br>
-  </div>
+      <b-form-group id="nome"
+                    label="Nome:"
+                    label-for="nomeI">
+        <b-form-input id="nomeI"
+                      class="input"
+                      v-model="account.nome"
+                      readonly>
+        </b-form-input>
+      </b-form-group>
 
-  <div>
-    <span class="left" style="margin-top:5vh;">Credito residuo</span>
-    <span class="right" style="margin-top:5vh;font-weight:bold;border: 0">{{account.credito}}€</span>
-  </div>
+      <b-form-group id="cognome"
+                    label="Cognome:"
+                    label-for="cognomeI">
+        <b-form-input id="cognomeI"
+                      class="input"
+                      v-model="account.cognome"
+                      readonly>
+        </b-form-input>
+      </b-form-group>
 
+      <b-form-group id="dataNascita"
+                    label="Data di Nascita:"
+                    label-for="dataNascitaI">
+        <b-form-input id="dataNascitaI"
+                      class="input"
+                      v-model="account.dataNascita"
+                      readonly>
+        </b-form-input>
+      </b-form-group>
+
+      <b-form-group id="luogoNascita"
+                    label="Luogo di Nascita:"
+                    label-for="luogoNascitaI">
+        <b-form-input id="luogoNascitaI"
+                      class="input"
+                      v-model="account.luogoNascita"
+                      readonly>
+        </b-form-input>
+      </b-form-group>
+
+      <b-form-group id="nazionalita"
+                    label="Nazionalità:"
+                    label-for="nazionalitaI">
+        <b-form-input id="nazionalitaI"
+                      class="input"
+                      v-model="account.nazionalita"
+                      readonly>
+        </b-form-input>
+      </b-form-group>
+
+      <b-form-group id="cf"
+                    label="Codice fiscale:"
+                    label-for="cfI">
+        <b-form-input id="cfI"
+                      class="input"
+                      v-model="account.cf"
+                      readonly>
+        </b-form-input>
+      </b-form-group>
+
+      <b-form-group id="tipoDoc"
+                    label="Tipo di Documento:"
+                    label-for="tipoDocI">
+        <b-form-input id="tipoDocI"
+                      class="input"
+                      v-model="account.tipoDoc"
+                      readonly>
+        </b-form-input>
+      </b-form-group>
+
+      <b-form-group id="nDoc"
+                    label="Numero del Documento:"
+                    label-for="nDocI">
+        <b-form-input id="nDocI"
+                      class="input"
+                      v-model="account.nDoc"
+                      readonly>
+        </b-form-input>
+      </b-form-group>
+
+      <b-form-group id="indResidenza"
+                    label="Indirizzo di Residenza:"
+                    label-for="indResidenzaI">
+        <b-form-input id="indResidenzaI"
+                      class="input"
+                      v-model="account.indResidenza"
+                      readonly>
+        </b-form-input>
+      </b-form-group>
+
+      <b-form-group id="telefono"
+                    label="Telefono Cellulare:"
+                    label-for="telefonoI">
+        <b-form-input id="telefonoI"
+                      class="input"
+                      v-model="account.cell"
+                      readonly>
+        </b-form-input>
+      </b-form-group>
+
+      <b-form-group id="email"
+                    label="Indirizzo E-Mail:"
+                    label-for="emailI">
+        <b-form-input id="emailI"
+                      class="input"
+                      v-model="account.email"
+                      readonly>
+        </b-form-input>
+      </b-form-group>
+
+      <b-form-group id="username"
+                    label="Username:"
+                    label-for="usernameI">
+        <b-form-input id="usernameI"
+                      class="input"
+                      v-model="account.username"
+                      readonly>
+        </b-form-input>
+      </b-form-group>
+
+      <b-form-group id="pw"
+                    label="Password:"
+                    label-for="pwI">
+        <b-form-input id="pwI"
+                      class="input"
+                      v-model="account.password"
+                      readonly>
+        </b-form-input>
+      </b-form-group>
+
+      <b-form-group id="credito"
+                    label="Credito:"
+                    label-for="creditoI">
+        <b-form-input id="creditoI"
+                      class="input"
+                      v-model="account.credito"
+                      readonly>
+        </b-form-input>
+      </b-form-group>
+
+    </b-form>
+  </div>
 </div>
 
 </template>
@@ -68,34 +165,11 @@ export default {
 
 <style scoped>
 
-.home {
-  margin: 0 10%;
-  width: 90%;
-  height: 100%;
-  overflow: auto;
-}
-
-.left {
-  float: left;
-  font-size: 10px;
-}
-
-.right {
-  float: right;
-  margin-right: 10%;
-  font-size: 10px;
-  border: 1px solid black;
-  width: 35%;
-  text-align:center;
-}
-
-.height-s {
-  height: 20px;
-}
-
-.tit {
-  margin: 4vh 0 3vh 0;
-  font-weight: bold;
+.input {
+  margin: 1vh 0;
+  min-height: 40px;
+  height: 3vh;
+  margin: auto;
 }
 
 </style>

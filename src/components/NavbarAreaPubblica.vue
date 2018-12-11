@@ -9,7 +9,7 @@
       <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
 
       <b-navbar-brand href="#" @click="bodyHome()">
-        <img src="../assets/home.jpg" width="30" height="30" alt="BV">
+        <img src="../assets/home.png" width="30" height="30" alt="BV">
       </b-navbar-brand>
 
       <b-collapse is-nav id="nav_collapse">
@@ -18,16 +18,20 @@
 
           <b-nav-item href="#" @click="Accedi()">
             Accedi
-            <img src="../assets/home.jpg" width="30" height="30" alt="BV">
+            <img src="../assets/arrow_right.png" width="30" height="30" alt="BV">
           </b-nav-item>
 
           <b-nav-item href="#" @click="ElencoGestori()">
             Elenco gestori
           </b-nav-item>
 
+          <b-nav-item href="#" @click="ElencoStazioni()">
+            Elenco stazioni
+          </b-nav-item>
+
           <b-nav-item href="#" @click="bodyRegistrati()">
             Registrati
-            <img src="../assets/home.jpg" width="30" height="30" alt="BV">
+            <img src="../assets/plus.png" width="30" height="30" alt="BV">
           </b-nav-item>
 
         </b-navbar-nav>
@@ -56,6 +60,10 @@ export default {
     },
     bodyRegistrati () {
       this.$emit('update:body', 'Registrati')
+    },
+    ElencoStazioni () {
+      this.$emit('update:body', 'ElencoStazioniIntero')
+      this.$emit('update:nomeGestore', '')
     },
     ElencoGestori () {
       this.$emit('update:body', 'ElencoGestori')

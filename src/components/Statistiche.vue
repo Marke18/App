@@ -39,7 +39,32 @@
   </div>
 
 </div>
+<!--
+<dl class="row">
+  <dt class="col-sm-3">Servizio</dt>
+  <dd class="col-sm-9">A description list is perfect for defining terms.</dd>
 
+  <dt class="col-sm-3">Data</dt>
+  <dd class="col-sm-9">
+    <p>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</p>
+    <p>Donec id elit non mi porta gravida at eget metus.</p>
+  </dd>
+
+  <dt class="col-sm-3">Costo</dt>
+  <dd class="col-sm-9">Etiam porta sem malesuada magna mollis euismod.</dd>
+</dl>
+
+<dl class="row">
+  <dt class="col-sm-3">Data</dt>
+  <dd class="col-sm-9">A description list is perfect for defining terms.</dd>
+
+  <dt class="col-sm-3">Taglio</dt>
+  <dd class="col-sm-9">
+    <p>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</p>
+    <p>Donec id elit non mi porta gravida at eget metus.</p>
+  </dd>
+</dl>
+-->
 </template>
 
 <script>

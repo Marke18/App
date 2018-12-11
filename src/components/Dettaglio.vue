@@ -2,44 +2,91 @@
 
 <div class="home">
   <div v-if="!conferma">
-    <h1 style="font-size: 2rem"> Dettaglio Ciclo-Stazione </h1>
+    <h3 class="text-center" style="margin: 5vh 0;"> Dettaglio Ciclo-Stazione </h3>
     <div style="margin: 2vh 0;">
-      <b-container class="bv-example-row" style="margin: 0;">
+
+      <b-container class="bv-example-row">
         <b-row>
 
-          <b-col cols="6" style="padding: 0;">
-            <b-row>
-              <b-col cols="12">
-                <h3><strong>{{stationD.nomeST}} ({{stationD.ciclo}})</strong></h3>
-              </b-col>
-              <b-col cols="8">
-                <span>Posti disponibili <br></span>
-                <span>Veicoli disponibili <br></span>
-                <span>Prese auto disponibili <br></span>
-              </b-col>
-              <b-col cols="4">
-                <span>N° {{stationD.postiDisp}}<br></span>
-                <span>N° {{stationD.ebike}}<br></span>
-                <span>N° {{stationD.preseAuto}}<br></span>
-              </b-col>
-            </b-row>
-          </b-col>
+          <b-col cols="6">
 
-          <b-col cols="6" style="padding: 0;">
-            <img src="../assets/home.jpg" width="100" height="100" alt="BV">
+            <b-list-group>
+
+              <b-list-group-item class="d-flex justify-content-between align-items-center" active>
+                <span>{{stationD.nomeST}} ({{stationD.ciclo}})</span>
+              </b-list-group-item>
+
+              <b-list-group-item class="d-flex justify-content-between align-items-center" >
+                <span>Posti totali</span>
+                <b-badge variant="primary" pill>{{stationD.postiTot}}</b-badge>
+              </b-list-group-item>
+
+              <b-list-group-item class="d-flex justify-content-between align-items-center">
+                <span>Posti disponibili</span>
+                <b-badge variant="primary" pill>{{stationD.postiDisp}}</b-badge>
+              </b-list-group-item>
+
+              <b-list-group-item class="d-flex justify-content-between align-items-center">
+                <span>Veicoli disponibili</span>
+                <b-badge variant="primary" pill>{{stationD.ebike}}</b-badge>
+              </b-list-group-item>
+
+              <b-list-group-item class="d-flex justify-content-between align-items-center">
+                <span>Prese auto disponibili</span>
+                <b-badge variant="primary" pill>{{stationD.preseAuto}}</b-badge>
+              </b-list-group-item>
+
+            </b-list-group>
+
+          </b-col>
+          <b-col cols="6">
+            <img src="../assets/home.png" width=100% height="100%" alt="BV">
           </b-col>
         </b-row>
       </b-container>
-    </div>
-
-    <h5 style="margin: 5vh 0;"><strong>STATO CICLO-STAZIONE</strong></h5>
-
-    <div style="border: 2px solid black;width:95%;height:10vh;margin-bottom:5vh;">
 
     </div>
 
-    <div style="border: 2px solid black;width:95%;height:10vh;margin-bottom:5vh;">
+    <h5 class="text-center" style="margin: 5vh 0;">STATO CICLO-STAZIONE</h5>
 
+    <div style="border: 2px solid black;width:100%;height:11vh;margin-bottom:5vh;font-size:10px;text-align:center;">
+      <div v-for="n in 8">
+        <div v-if="n <= stationD.postiDisp">
+          <b-card img-src="../assets/bike.jpg"
+                  img-width="12.5%"
+                  img-height="3vh"
+                  img-bottom
+                  style="width:12.5%;height:10vh;float:left;">
+            <p class="card-text">
+              <u>POSTO {{n}}</u>
+            </p>
+          </b-card>
+        </div>
+
+        <div v-else>
+          <b-card img-src="../assets/black.jpg"
+                  img-width="12.5%"
+                  img-height="5vh"
+                  img-bottom
+                  style="width:12.5%;height:10vh;float:left;">
+            <p class="card-text">
+              <u>POSTO {{n}}</u>
+            </p>
+          </b-card>
+        </div>
+      </div>
+    </div>
+
+    <div style="border: 2px solid black;width:100%;height:11vh;margin-bottom:5vh;font-size:10px;">
+      <dl class="row">
+        <dt class="col-sm-1">Legenda Stati</dt>
+        <dd class="col-sm-1">A description list is perfect for defining terms.</dd>
+
+        <dt class="col-sm-1">Legenda Tipi</dt>
+        <dd class="col-sm-9">
+          <p>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</p>
+        </dd>
+      </dl>
     </div>
 
     <div class="text-center" style="margin: 2vh 0 3vh -5%;">
@@ -58,7 +105,7 @@
         </div>
 
         <div v-else class="text-center">
-          <img src="../assets/home.jpg" width="30" height="30" alt="BV">
+          <img src="../assets/home.png" width="30" height="30" alt="BV">
           <p>Leggi sul display della colonnina il codice ed inseriscilo nella textbox sottostante.</p>
           <b-form @submit="Verifica()">
             <b-form-input type="text"
@@ -123,15 +170,12 @@ export default {
 
 <style scoped>
 
-.home {
-  margin: 0 5%;
-  width: 95%;
-  height: 100%;
-  overflow: auto;
+.card-body {
+  padding: 0;
 }
 
 span {
-  font-size: 10px;
+  font-size: 12px;
 }
 
 </style>

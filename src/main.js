@@ -18,6 +18,7 @@ import NavbarTorna from './components/NavbarTorna.vue'
 import Home from './components/Home.vue'
 import Registrati from './components/Registrati.vue'
 import Accedi from './components/Accedi.vue'
+import Recupera from './components/Recupera.vue'
 import ElencoGestori from './components/ElencoGestori.vue'
 import Manager from './components/ElencoGestori2.vue'
 import ElencoStazioni from './components/ElencoStazioni.vue'
@@ -30,6 +31,7 @@ import Credito from './components/Credito.vue'
 import Statistiche from './components/Statistiche.vue'
 import Movement from './components/Movimenti(Statistiche).vue'
 import Recharge from './components/Ricariche(Statistiche).vue'
+import ElencoStazioniIntero from './components/ElencoStazioniIntero.vue'
 
 Vue.use(BootstrapVue)
 
@@ -44,6 +46,7 @@ Vue.component('navbar-torna', NavbarTorna)
 Vue.component('home', Home)
 Vue.component('registrati', Registrati)
 Vue.component('accedi', Accedi)
+Vue.component('recupera', Recupera)
 Vue.component('elenco-gestori', ElencoGestori)
 Vue.component('manager', Manager)
 Vue.component('elenco-stazioni', ElencoStazioni)
@@ -56,6 +59,7 @@ Vue.component('credito', Credito)
 Vue.component('statistiche', Statistiche)
 Vue.component('movement', Movement)
 Vue.component('recharge', Recharge)
+Vue.component('elenco-stazioni-intero', ElencoStazioniIntero)
 
 /* eslint-disable no-new */
 new Vue({
@@ -115,12 +119,12 @@ window.app = new Vue({
     ],
     stations: [
       [
-        {nomeG: 'TUC', nomeST: 'abba', ciclo: 'as', via: 'ds', postiTot: 2, postiDisp: 1, ebike: 2, preseAuto: 0},
-        {nomeG: 'TUC', nomeST: 'assa', ciclo: 'sa', via: 'sa', postiTot: 3, postiDisp: 0, ebike: 3, preseAuto: 1}
+        {nomeG: 'TUC', nomeST: 'BABILONIA', ciclo: 'IN LINEA', via: 'Via Pingu 18', postiTot: 2, postiDisp: 1, ebike: 2, preseAuto: 0},
+        {nomeG: 'TUC', nomeST: 'ANTARTIDE', ciclo: 'IN LINEA', via: 'Via Pingu 97', postiTot: 3, postiDisp: 0, ebike: 3, preseAuto: 1}
       ],
       [
-        {nomeG: 'TUC2', nomeST: 'abba2', ciclo: 'as', via: 'ds', postiTot: 2, postiDisp: 1, ebike: 2},
-        {nomeG: 'TUC2', nomeST: 'assa2', ciclo: 'sa', via: 'sa', postiTot: 3, postiDisp: 0, ebike: 3}
+        {nomeG: 'TUC2', nomeST: 'abba2', ciclo: 'as', via: 'ds', postiTot: 2, postiDisp: 1, ebike: 2, preseAuto: 0},
+        {nomeG: 'TUC2', nomeST: 'assa2', ciclo: 'sa', via: 'sa', postiTot: 3, postiDisp: 0, ebike: 3, preseAuto: 1}
       ]
     ],
     movements: [

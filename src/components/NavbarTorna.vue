@@ -6,7 +6,7 @@
   <div style="height: 5vh;">
     <b-navbar toggleable="xs" type="light" variant="faded">
       <b-navbar-brand href="#" @click="Torna()">
-        <img src="../assets/home.jpg" width="30" height="30" alt="BV">
+        <img src="../assets/arrow_left.png" width="30" height="30" alt="BV">
       </b-navbar-brand>
     </b-navbar>
   </div>

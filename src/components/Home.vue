@@ -17,8 +17,8 @@ export default {
 <style>
 
 .home {
-  margin: 0;
-  width: 100%;
+  margin: 5vh 5%;
+  width: 90%;
 }
 
 </style>

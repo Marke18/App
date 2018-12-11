@@ -4,14 +4,14 @@
 
   <b-form @submit="updateCredito">
 
-    <div style="font-weight: bold;">
-      <b-container class="bv-example-row" style="margin: 6vh 0;">
+    <div style="font-weight: bold;margin-bottom:6vh;">
+      <b-container class="bv-example-row" style="margin: 8vh 0;">
         <b-row>
           <b-col cols="8" style="padding:0">Credito residuo</b-col>
           <b-col cols="4">€ {{credito}}</b-col>
         </b-row>
       </b-container>
-      <span>Ricarica il tuo credito <img src="../assets/home.jpg" width="30" height="30" alt="BV"></span>
+      <span>Ricarica il tuo credito <img src="../assets/arrow_under.png" width="30" height="30" alt="BV"></span>
     </div>
     <b-form-group id="metodoPaga"
                   label="Metodo di pagamento:"

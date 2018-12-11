@@ -22,9 +22,13 @@
 
         <accedi v-show="body === 'Accedi'" :user.sync="user" :body.sync="body" :nome-gestore.sync="nomeGestore"></accedi>
 
+        <recupera v-show="body === 'Recupera'" :body.sync="body"></recupera>
+
         <elenco-gestori :managers="managers" v-show="body === 'ElencoGestori'"></elenco-gestori>
 
         <elenco-stazioni :stations="stations[indiceStazione]" v-show="body === 'ElencoStazioni'"></elenco-stazioni>
+
+        <elenco-stazioni-intero :stations="stations" v-show="body === 'ElencoStazioniIntero'"></elenco-stazioni-intero>
 
         <dettaglio :station-d="stationD" :user="user" :account="account" :codice-colonna="codiceColonna" :body.sync="body" :nome-gestore.sync="nomeGestore" v-show="body === 'Dettaglio'"></dettaglio>
 

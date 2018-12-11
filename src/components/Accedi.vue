@@ -34,6 +34,7 @@
 
   <div style="text-align:left;margin:5vh -15% 0 -15%;">
     <b-btn @click="Recupera()" variant="link" style="font-size: 13px;">Recupera username e password</b-btn>
+    <br>
     <b-btn @click="Registrati()" variant="link" style="font-size: 13px;">Non sei ancora registrato</b-btn>
   </div>
 </div>

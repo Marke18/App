@@ -10,7 +10,7 @@
       <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
 
       <b-navbar-brand href="#" @click="Panoramica()">
-        <img src="../assets/home.jpg" width="30" height="30" alt="BV">
+        <img src="../assets/home.png" width="30" height="30" alt="BV">
       </b-navbar-brand>
 
       <b-collapse is-nav id="nav_collapse">
@@ -39,12 +39,12 @@
 
           <b-nav-item href="#" @click="Profilo()">
             Profilo utente
-              <img src="../assets/home.jpg" width="30" height="30" alt="BV">
+              <img src="../assets/profile.jpg" width="30" height="30" alt="BV">
           </b-nav-item>
 
           <b-nav-item href="#" @click="navbarPubblica()">
             Esci
-              <img src="../assets/home.jpg" width="30" height="30" alt="BV">
+              <img src="../assets/arrow_right.png" width="30" height="30" alt="BV">
           </b-nav-item>
 
         </b-navbar-nav>
@@ -73,7 +73,7 @@ export default {
       this.$emit('update:body', 'Profilo')
     },
     ElencoStazioni () {
-      this.$emit('update:body', 'ElencoStazioni')
+      this.$emit('update:body', 'ElencoStazioniIntero')
       this.$emit('update:nomeGestore', '')
     },
     Statistiche () {
