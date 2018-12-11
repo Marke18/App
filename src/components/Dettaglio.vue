@@ -40,7 +40,7 @@
 
           </b-col>
           <b-col cols="6">
-            <img src="../assets/home.png" width=100% height="100%" alt="BV">
+            <img src="../assets/home.jpg" width=100% height="100%" alt="BV">
           </b-col>
         </b-row>
       </b-container>
@@ -105,7 +105,7 @@
         </div>
 
         <div v-else class="text-center">
-          <img src="../assets/home.png" width="30" height="30" alt="BV">
+          <img src="../assets/right.png" width="30" height="30" alt="BV">
           <p>Leggi sul display della colonnina il codice ed inseriscilo nella textbox sottostante.</p>
           <b-form @submit="Verifica()">
             <b-form-input type="text"
@@ -123,7 +123,7 @@
 
   </div>
   <div class="text-center" style="width:95%;" v-if="conferma">
-    <img src="https://placekitten.com/g/30/30" class="d-inline-block align-top" style="margin-top:10vh;" alt="BV">
+    <img src="../assets/right.png" class="d-inline-block align-top" height="100" width="100" style="margin-top:10vh;" alt="BV">
     <p style="margin-top: 20vh;">
       Il codice inserito è corretto, stai per accedere alla ciclostazione di {{stationD.nomeST}}.<br><br>
       Ora prosegui le operazioni direttamente dalla colonnina della stazione<br>

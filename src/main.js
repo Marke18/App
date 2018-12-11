@@ -8,10 +8,11 @@ import router from './router'
 import BootstrapVue from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
+import { Swipe, SwipeItem } from 'vue-swipe'
+import { Slide } from 'vue-burger-menu'
 
 // Menu
-import NavbarAreaPubblica from './components/NavbarAreaPubblica.vue'
-import NavbarAreaPrivata from './components/NavbarAreaPrivata.vue'
+import Navbar from './components/Navbar.vue'
 import NavbarTorna from './components/NavbarTorna.vue'
 
 // Area Pubblica
@@ -35,13 +36,18 @@ import ElencoStazioniIntero from './components/ElencoStazioniIntero.vue'
 import DettaglioRicarica from './components/DettaglioRicarica.vue'
 import DettaglioMovimento from './components/DettaglioMovimento.vue'
 
+require('vue-swipe/dist/vue-swipe.css')
+
 Vue.use(BootstrapVue)
 
 Vue.config.productionTip = false
 
+Vue.component('swipe', Swipe)
+Vue.component('swipe-item', SwipeItem)
+Vue.component('slide', Slide)
+
 // Menu
-Vue.component('navbar-area-pubblica', NavbarAreaPubblica)
-Vue.component('navbar-area-privata', NavbarAreaPrivata)
+Vue.component('navbar', Navbar)
 Vue.component('navbar-torna', NavbarTorna)
 
 // Area Pubblica
@@ -134,6 +140,14 @@ window.app = new Vue({
       ]
     ],
     movements: [
+      {servizio: 'a', id_prenotazione: 'a', data: 'a', oraIn: 'a', oraFin: 'a', prelievo: 'a', consegna: 'a', costo: 'a'},
+      {servizio: 'a', id_prenotazione: 'a', data: 'a', oraIn: 'a', oraFin: 'a', prelievo: 'a', consegna: 'a', costo: 'a'},
+      {servizio: 'a', id_prenotazione: 'a', data: 'a', oraIn: 'a', oraFin: 'a', prelievo: 'a', consegna: 'a', costo: 'a'},
+      {servizio: 'a', id_prenotazione: 'a', data: 'a', oraIn: 'a', oraFin: 'a', prelievo: 'a', consegna: 'a', costo: 'a'},
+      {servizio: 'a', id_prenotazione: 'a', data: 'a', oraIn: 'a', oraFin: 'a', prelievo: 'a', consegna: 'a', costo: 'a'},
+      {servizio: 'a', id_prenotazione: 'a', data: 'a', oraIn: 'a', oraFin: 'a', prelievo: 'a', consegna: 'a', costo: 'a'},
+      {servizio: 'a', id_prenotazione: 'a', data: 'a', oraIn: 'a', oraFin: 'a', prelievo: 'a', consegna: 'a', costo: 'a'},
+      {servizio: 'a', id_prenotazione: 'a', data: 'a', oraIn: 'a', oraFin: 'a', prelievo: 'a', consegna: 'a', costo: 'a'},
       {servizio: 'a', id_prenotazione: 'a', data: 'a', oraIn: 'a', oraFin: 'a', prelievo: 'a', consegna: 'a', costo: 'a'},
       {servizio: 'a', id_prenotazione: 'a', data: 'a', oraIn: 'a', oraFin: 'a', prelievo: 'a', consegna: 'a', costo: 'a'},
       {servizio: 'a', id_prenotazione: 'a', data: 'a', oraIn: 'a', oraFin: 'a', prelievo: 'a', consegna: 'a', costo: 'a'},

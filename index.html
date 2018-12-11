@@ -9,11 +9,10 @@
     <div id="app">
 
       <!-- Menu -->
-      <navbar-area-pubblica v-show="user === '' && body !== 'Dettaglio'" :body.sync="body" :user.sync="user" :nome-gestore.sync="nomeGestore"></navbar-area-pubblica>
-      <navbar-area-privata v-show="user !== '' && body !== 'Dettaglio'" :body.sync="body" :user.sync="user" :nome-gestore.sync="nomeGestore"></navbar-area-privata>
+      <navbar v-show="body !== 'Dettaglio'" :body.sync="body" :user.sync="user" :nome-gestore.sync="nomeGestore"></navbar>
       <navbar-torna v-show="body === 'Dettaglio'" :body.sync="body" :user.sync="user"></navbar-torna>
 
-      <div style="border: 2px solid black; margin: 1.5vh; height: 80vh; overflow: scroll;">
+      <div style="margin: 1.5vh; height: 80vh; overflow: scroll;">
 
         <!-- Area Pubblica -->
         <registrati v-show="body === 'Registrati'" :body.sync="body"></registrati>
@@ -26,9 +25,9 @@
 
         <elenco-gestori :managers="managers" v-show="body === 'ElencoGestori'"></elenco-gestori>
 
-        <elenco-stazioni :stations="stations[indiceStazione]" v-show="body === 'ElencoStazioni'"></elenco-stazioni>
-
         <elenco-stazioni-intero :stations="stations" v-show="body === 'ElencoStazioniIntero'"></elenco-stazioni-intero>
+
+        <elenco-stazioni :stations="stations[indiceStazione]" v-show="body === 'ElencoStazioni'"></elenco-stazioni>
 
         <dettaglio :station-d="stationD" :user="user" :account="account" :codice-colonna="codiceColonna" :body.sync="body" :nome-gestore.sync="nomeGestore" v-show="body === 'Dettaglio'"></dettaglio>
 

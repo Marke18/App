@@ -16,7 +16,7 @@
       </b-form-input>
     </b-form-group>
     <div style="margin: 5vh 0">
-      <b-button type="submit">Registrati</b-button>
+      <b-button type="submit">Recupera la Password</b-button>
     </div>
   </b-form>
 </div>
