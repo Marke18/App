@@ -50,7 +50,7 @@
     <h5 class="text-center" style="margin: 5vh 0;">STATO CICLO-STAZIONE</h5>
 
     <div style="border: 2px solid black;width:100%;height:11vh;margin-bottom:5vh;font-size:10px;text-align:center;">
-      <div v-for="n in 8">
+      <div v-for="n in 8" v-bind:key="n">
         <div v-if="n <= stationD.postiDisp">
           <b-card img-src="../assets/bike.jpg"
                   img-width="12.5%"

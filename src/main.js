@@ -32,6 +32,8 @@ import Statistiche from './components/Statistiche.vue'
 import Movement from './components/Movimenti(Statistiche).vue'
 import Recharge from './components/Ricariche(Statistiche).vue'
 import ElencoStazioniIntero from './components/ElencoStazioniIntero.vue'
+import DettaglioRicarica from './components/DettaglioRicarica.vue'
+import DettaglioMovimento from './components/DettaglioMovimento.vue'
 
 Vue.use(BootstrapVue)
 
@@ -60,6 +62,8 @@ Vue.component('statistiche', Statistiche)
 Vue.component('movement', Movement)
 Vue.component('recharge', Recharge)
 Vue.component('elenco-stazioni-intero', ElencoStazioniIntero)
+Vue.component('dettaglio-ricarica', DettaglioRicarica)
+Vue.component('dettaglio-movimento', DettaglioMovimento)
 
 /* eslint-disable no-new */
 new Vue({
@@ -104,6 +108,8 @@ window.app = new Vue({
     },
     codiceColonna: '1234567890',
     nomeGestore: '',
+    dettaglioR: {},
+    dettaglioM: {},
     stationD: {
       nomeG: '',
       nomeST: '',
@@ -128,6 +134,8 @@ window.app = new Vue({
       ]
     ],
     movements: [
+      {servizio: 'a', id_prenotazione: 'a', data: 'a', oraIn: 'a', oraFin: 'a', prelievo: 'a', consegna: 'a', costo: 'a'},
+      {servizio: 'a', id_prenotazione: 'a', data: 'a', oraIn: 'a', oraFin: 'a', prelievo: 'a', consegna: 'a', costo: 'a'},
       {servizio: 'a', id_prenotazione: 'a', data: 'a', oraIn: 'a', oraFin: 'a', prelievo: 'a', consegna: 'a', costo: 'a'},
       {servizio: 'a', id_prenotazione: 'a', data: 'a', oraIn: 'a', oraFin: 'a', prelievo: 'a', consegna: 'a', costo: 'b'}
     ],

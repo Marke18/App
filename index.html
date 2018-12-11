@@ -16,13 +16,13 @@
       <div style="border: 2px solid black; margin: 1.5vh; height: 80vh; overflow: scroll;">
 
         <!-- Area Pubblica -->
-        <home v-show="body === 'Home'"></home>
-
         <registrati v-show="body === 'Registrati'" :body.sync="body"></registrati>
 
         <accedi v-show="body === 'Accedi'" :user.sync="user" :body.sync="body" :nome-gestore.sync="nomeGestore"></accedi>
 
         <recupera v-show="body === 'Recupera'" :body.sync="body"></recupera>
+
+        <home v-show="body === 'Home'"></home>
 
         <elenco-gestori :managers="managers" v-show="body === 'ElencoGestori'"></elenco-gestori>
 
@@ -38,6 +38,10 @@
         <credito :credito.sync="account.credito" v-show="body === 'Credito'"></credito>
 
         <statistiche :movements="movements" :recharges="recharges" v-show="body === 'Statistiche'"></statistiche>
+
+        <dettaglio-ricarica :dettaglio="dettaglioR" v-show="body === 'DettaglioRicarica'"></dettaglio-ricarica>
+
+        <dettaglio-movimento :dettaglio="dettaglioM" v-show="body === 'DettaglioMovimento'"></dettaglio-movimento>
 
       </div>
     </div>

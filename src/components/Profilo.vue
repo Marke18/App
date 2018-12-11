@@ -3,10 +3,10 @@
 <div class="home">
   <div style="margin: 0 5%;">
     <b-form>
-      <h1 class="text-center" style="margin:3vh 0 6vh 0;">
+      <h2 class="text-center" style="margin:3vh 0 6vh 0;">
         Il mio Profilo
         <img src="../assets/profile.jpg" width="30" height="30" alt="BV">
-      </h1>
+      </h2>
 
       <b-form-group id="nome"
                     label="Nome:"
