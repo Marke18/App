@@ -160,7 +160,7 @@ window.app = new Vue({
           coord: [45.584829, 10.441879]
         },
         {nomeG: 'TUC', nomeST: 'ANTARTIDE', ciclo: 'IN LINEA', via: 'Via Pingu 97', postiTot: 3, postiDisp: 0, ebike: 3, preseAuto: 1, posto: ['Bike pubblica elettrica'], stato: ['Carica'], coord: [45.584829, 10.444869]}
-      ],
+      ], 
       [
         {nomeG: 'TUC2', nomeST: 'abba2', ciclo: 'as', via: 'ds', postiTot: 2, postiDisp: 1, ebike: 2, preseAuto: 0, posto: ['Bike pubblica elettrica'], stato: ['Carica'], coord: [45.584829, 10.441879]},
         {nomeG: 'TUC2', nomeST: 'assa2', ciclo: 'sa', via: 'sa', postiTot: 3, postiDisp: 0, ebike: 3, preseAuto: 1, posto: ['Bike pubblica elettrica'], stato: ['Carica'], coord: [45.588461, 10.438923]}
