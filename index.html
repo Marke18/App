@@ -9,8 +9,8 @@
     <div id="app">
 
       <!-- Menu -->
-      <navbar v-show="body !== 'Dettaglio'" :body.sync="body" :user.sync="user" :nome-gestore.sync="nomeGestore"></navbar>
-      <navbar-torna v-show="body === 'Dettaglio'" :body.sync="body" :user.sync="user"></navbar-torna>
+      <navbar v-show="body !== 'Dettaglio' && body !== 'DettaglioMovimento' && body !== 'DettaglioRicarica'" :body.sync="body" :user.sync="user" :nome-gestore.sync="nomeGestore"></navbar>
+      <navbar-torna v-show="body === 'Dettaglio' || body === 'DettaglioMovimento' || body === 'DettaglioRicarica'" :body.sync="body"></navbar-torna>
 
       <div style="margin: 1.5vh; height: 80vh; overflow: scroll;">
 

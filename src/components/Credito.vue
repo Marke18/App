@@ -11,7 +11,7 @@
           <b-col cols="4">€ {{credito}}</b-col>
         </b-row>
       </b-container>
-      <span>Ricarica il tuo credito <img src="../assets/arrow_under.png" width="30" height="30" alt="BV"></span>
+      <span>Ricarica il tuo credito</span>
     </div>
     <b-form-group id="metodoPaga"
                   label="Metodo di pagamento:"

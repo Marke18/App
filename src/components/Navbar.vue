@@ -2,17 +2,17 @@
 
 <div class="head">
   <slide>
-    <a href="#" @click="Panoramica()">Home<img src="../assets/home.jpg" width="30" height="30" alt="BV"></a>
+    <a href="#" @click="Panoramica()">Home</a>
     <a href="#" @click="ElencoGestori()">Elenco Gestori</a>
     <a href="#" @click="ElencoStazioni()">Elenco Stazioni</a>
 
-    <a href="#" @click="Accedi()" v-show="user === ''">Accedi<img src="../assets/arrow_right.png" width="30" height="30" alt="BV"></a>
-    <a href="#" @click="bodyRegistrati()" v-show="user === ''">Registrati<img src="../assets/plus.png" width="30" height="30" alt="BV"></a>
+    <a href="#" @click="Accedi()" v-show="user === ''">Accedi</a>
+    <a href="#" @click="bodyRegistrati()" v-show="user === ''">Registrati</a>
 
     <a href="#" @click="Credito()" v-show="user !== ''">Credito</a>
     <a href="#" @click="Statistiche()" v-show="user !== ''">Statistiche</a>
-    <a href="#" @click="Profilo()" v-show="user !== ''">Profilo<img src="../assets/profile.png" width="30" height="30" alt="BV"></a>
-    <a href="#" @click="navbarPubblica()" v-show="user !== ''">Esci<img src="../assets/arrow_right.png" width="30" height="30" alt="BV"></a>
+    <a href="#" @click="Profilo()" v-show="user !== ''">Profilo</a>
+    <a href="#" @click="navbarPubblica()" v-show="user !== ''">Esci</a>
   </slide>
 </div>
 
@@ -65,32 +65,38 @@ export default {
 
 .head a {
   text-decoration: none;
-  color: #FFFFFF;
+  color: #000000;
 }
 
 .head a:visited {
   text-decoration: none;
-  color: #FFFFFF;
+  color: #000000;
 }
 
 .head a:hover {
   text-decoration: none;
-  color: #FFFFFF;
+  color: #000000;
 }
 
 .head {
-  min-height: 60px;
+  height: 60px;
   margin: 0;
-  background-color: #FFFFFF;
+  background-color: #007bff;
 }
 
 .bm-burger-button {
-  cursor: pointer;
   height: 27px;
   left: 25px;
-  position: absolute;
   top: 18px;
   width: 33px;
+}
+
+.bm-burger-bars {
+  background-color: #FFFFFF;
+}
+
+.bm-menu {
+  background-color: #FFFFFF;
 }
 
 </style>

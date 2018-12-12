@@ -56,25 +56,21 @@
 
           <div v-for="n in stationD.postiTot" v-bind:key="n">
             <div v-if="n <= stationD.postiDisp">
-              <b-list-group-item class="d-flex justify-content-between align-items-center text-center">
-                <b-row>
-                  <b-col cols="3" style="padding-left: 0;margin:auto;"><img src="../assets/bike.jpg" width="50" height="50" alt="BV"></b-col>
-                  <b-col cols="6">
-                    POSTO {{n}}<br>{{stationD.posto[n-1]}}<br><br>{{stationD.stato[n-1]}}
-                  </b-col>
-                  <b-col cols="3" style="padding-left: 0;margin:auto;"><img src="../assets/bike.jpg" width="50" height="50" alt="BV"></b-col>
-                </b-row>
-              </b-list-group-item>
+              <posto-stato :n="n" :stationD="stationD" :style1="{backgroundColor:'white'}" v-if="stationD.stato[n-1] === 'Non elettrica'"></posto-stato>
+              <posto-stato :n="n" :stationD="stationD" :style1="{backgroundColor:'green'}" v-if="stationD.stato[n-1] === 'Carica'"></posto-stato>
+              <posto-stato :n="n" :stationD="stationD" :style1="{backgroundColor:'yellow'}" v-if="stationD.stato[n-1] === 'In carica'"></posto-stato>
+              <posto-stato :n="n" :stationD="stationD" :style1="{backgroundColor:'red'}" v-if="stationD.stato[n-1] === 'Fuori servizio'"></posto-stato>
+              <posto-stato :n="n" :stationD="stationD" :style1="{backgroundColor:'blue'}" v-if="stationD.stato[n-1] === 'Prenotato'"></posto-stato>
             </div>
 
             <div v-else>
-              <b-list-group-item class="d-flex justify-content-between align-items-center text-center">
+              <b-list-group-item class="d-flex justify-content-between align-items-center text-center" :style="style">
                 <b-row>
-                  <b-col cols="3" style="padding-left: 0;margin:auto;"><img src="../assets/bike.jpg" width="50" height="50" alt="BV"></b-col>
-                  <b-col cols="6">
+                  <b-col cols="12" style="padding-left: 0;margin:auto;"><img src="../assets/bike.jpg" width="50" height="50" alt="BV"></b-col>
+                  <b-col cols="12">
                     POSTO {{n}}<br>Vuoto
                   </b-col>
-                  <b-col cols="3" style="padding-left: 0;margin:auto;"><img src="../assets/bike.jpg" width="50" height="50" alt="BV"></b-col>
+                  <b-col cols="12" style="padding-left: 0;margin:auto;"><img src="../assets/bike.jpg" width="50" height="50" alt="BV"></b-col>
                 </b-row>
               </b-list-group-item>
             </div>
@@ -137,7 +133,8 @@ export default {
   data () {
     return {
       conferma: false,
-      codice: ''
+      codice: '',
+      style: {bacgroundColor: 'grey'}
     }
   },
   methods: {
@@ -160,16 +157,8 @@ export default {
     }
   }
 }
-
 </script>
 
 <style scoped>
-
-.col-3 {
-}
-
-.col-6 {
-  padding: auto;
-}
 
 </style>

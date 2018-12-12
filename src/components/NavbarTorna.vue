@@ -17,8 +17,11 @@ export default {
   props: ['body'],
   methods: {
     Torna () {
-      this.$emit('update:body', 'ElencoStazioni')
-      window.app.body = 'ElencoStazioni'
+      if (this.body === 'Dettaglio') {
+        this.$emit('update:body', 'ElencoStazioni')
+      } else {
+        this.$emit('update:body', 'Statistiche')
+      }
     }
   }
 }

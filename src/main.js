@@ -25,6 +25,7 @@ import Manager from './components/ElencoGestori2.vue'
 import ElencoStazioni from './components/ElencoStazioni.vue'
 import Station from './components/ElencoStazioni2.vue'
 import Dettaglio from './components/Dettaglio.vue'
+import PostoStato from './components/PostoStato.vue'
 
 // Area Privata
 import Profilo from './components/Profilo.vue'
@@ -60,6 +61,7 @@ Vue.component('manager', Manager)
 Vue.component('elenco-stazioni', ElencoStazioni)
 Vue.component('station', Station)
 Vue.component('dettaglio', Dettaglio)
+Vue.component('posto-stato', PostoStato)
 
 // Area Privata
 Vue.component('profilo', Profilo)
@@ -77,13 +79,16 @@ new Vue({
   data: {
     link: 'www.ecospazio.eu Copyright 2019 Logiss Srl - Divisione Smart',
     Style: {
-      height: '5px',
       width: '100%',
       textAlign: 'center',
       position: 'absolute',
-      bottom: '1vh',
+      bottom: '0',
       textDecoration: 'underline',
-      fontSize: '10px'
+      fontSize: '10px',
+      backgroundColor: '#007bff',
+      color: '#FFFFFF',
+      margin: '0',
+      padding: '2px'
     }
   }
 })
