@@ -9,34 +9,34 @@
         <b-row>
 
           <b-col cols="12" class="text-center">
-            <img src="../assets/home.jpg" width=150 height="150" alt="BV">
+            <img src="../assets/bike.jpg" width=150 height="150" alt="BV">
           </b-col>
 
           <b-col cols="12">
 
             <b-list-group>
 
-              <b-list-group-item class="d-flex justify-content-between align-items-center" active>
-                <span>{{stationD.nomeST}} ({{stationD.ciclo}})</span>
+              <b-list-group-item class="text-center" active>
+                {{stationD.nomeST}} ({{stationD.ciclo}})
               </b-list-group-item>
 
               <b-list-group-item class="d-flex justify-content-between align-items-center" >
-                <span>Posti totali</span>
+                Posti totali
                 <b-badge variant="primary" pill>{{stationD.postiTot}}</b-badge>
               </b-list-group-item>
 
               <b-list-group-item class="d-flex justify-content-between align-items-center">
-                <span>Posti disponibili</span>
+                Posti disponibili
                 <b-badge variant="primary" pill>{{stationD.postiDisp}}</b-badge>
               </b-list-group-item>
 
               <b-list-group-item class="d-flex justify-content-between align-items-center">
-                <span>Veicoli disponibili</span>
+                Veicoli disponibili
                 <b-badge variant="primary" pill>{{stationD.ebike}}</b-badge>
               </b-list-group-item>
 
               <b-list-group-item class="d-flex justify-content-between align-items-center">
-                <span>Prese auto disponibili</span>
+                Prese auto disponibili
                 <b-badge variant="primary" pill>{{stationD.preseAuto}}</b-badge>
               </b-list-group-item>
 
@@ -48,46 +48,40 @@
 
     </div>
 
-    <h5 class="text-center" style="margin: 5vh 0;">STATO CICLO-STAZIONE</h5>
+    <div style="margin:5vh 0;">
+      <b-container class="bv-example-row">
+        <b-list-group>
 
-    <div style="border: 2px solid black;width:100%;height:11vh;margin-bottom:5vh;font-size:10px;text-align:center;">
-      <div v-for="n in 8" v-bind:key="n">
-        <div v-if="n <= stationD.postiDisp">
-          <b-card img-src="../assets/bike.jpg"
-                  img-width="12.5%"
-                  img-height="3vh"
-                  img-bottom
-                  style="width:12.5%;height:10vh;float:left;">
-            <p class="card-text">
-              <u>POSTO {{n}}</u>
-            </p>
-          </b-card>
-        </div>
+          <b-list-group-item class="text-center" active>STATO CICLO-STAZIONE</b-list-group-item>
 
-        <div v-else>
-          <b-card img-src="../assets/black.jpg"
-                  img-width="12.5%"
-                  img-height="5vh"
-                  img-bottom
-                  style="width:12.5%;height:10vh;float:left;">
-            <p class="card-text">
-              <u>POSTO {{n}}</u>
-            </p>
-          </b-card>
-        </div>
-      </div>
-    </div>
+          <div v-for="n in stationD.postiTot" v-bind:key="n">
+            <div v-if="n <= stationD.postiDisp">
+              <b-list-group-item class="d-flex justify-content-between align-items-center text-center">
+                <b-row>
+                  <b-col cols="3" style="padding-left: 0;margin:auto;"><img src="../assets/bike.jpg" width="50" height="50" alt="BV"></b-col>
+                  <b-col cols="6">
+                    POSTO {{n}}<br>{{stationD.posto[n-1]}}<br><br>{{stationD.stato[n-1]}}
+                  </b-col>
+                  <b-col cols="3" style="padding-left: 0;margin:auto;"><img src="../assets/bike.jpg" width="50" height="50" alt="BV"></b-col>
+                </b-row>
+              </b-list-group-item>
+            </div>
 
-    <div style="border: 2px solid black;width:100%;height:11vh;margin-bottom:5vh;font-size:10px;">
-      <dl class="row">
-        <dt class="col-sm-1">Legenda Stati</dt>
-        <dd class="col-sm-1">A description list is perfect for defining terms.</dd>
+            <div v-else>
+              <b-list-group-item class="d-flex justify-content-between align-items-center text-center">
+                <b-row>
+                  <b-col cols="3" style="padding-left: 0;margin:auto;"><img src="../assets/bike.jpg" width="50" height="50" alt="BV"></b-col>
+                  <b-col cols="6">
+                    POSTO {{n}}<br>Vuoto
+                  </b-col>
+                  <b-col cols="3" style="padding-left: 0;margin:auto;"><img src="../assets/bike.jpg" width="50" height="50" alt="BV"></b-col>
+                </b-row>
+              </b-list-group-item>
+            </div>
+          </div>
 
-        <dt class="col-sm-1">Legenda Tipi</dt>
-        <dd class="col-sm-9">
-          <p>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</p>
-        </dd>
-      </dl>
+        </b-list-group>
+      </b-container>
     </div>
 
     <div class="text-center" style="margin: 2vh 0 3vh -5%;">
@@ -171,8 +165,11 @@ export default {
 
 <style scoped>
 
-.card-body {
-  padding: 0;
+.col-3 {
+}
+
+.col-6 {
+  padding: auto;
 }
 
 </style>

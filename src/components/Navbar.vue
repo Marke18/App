@@ -85,12 +85,12 @@ export default {
 }
 
 .bm-burger-button {
-	cursor: pointer;
-	height: 27px;
-	left: 25px;
-	position: absolute;
-	top: 18px;
-	width: 33px;
+  cursor: pointer;
+  height: 27px;
+  left: 25px;
+  position: absolute;
+  top: 18px;
+  width: 33px;
 }
 
 </style>

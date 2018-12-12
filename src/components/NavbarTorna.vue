@@ -28,12 +28,12 @@ export default {
 <style scoped>
 
 .freccia {
-	cursor: pointer;
-	height: 27px;
-	left: 22px;
-	position: absolute;
-	top: 17px;
-	width: 33px;
+  cursor: pointer;
+  height: 27px;
+  left: 22px;
+  position: absolute;
+  top: 17px;
+  width: 33px;
 }
 
 </style>

@@ -131,12 +131,23 @@ window.app = new Vue({
     ],
     stations: [
       [
-        {nomeG: 'TUC', nomeST: 'BABILONIA', ciclo: 'IN LINEA', via: 'Via Pingu 18', postiTot: 2, postiDisp: 1, ebike: 2, preseAuto: 0},
-        {nomeG: 'TUC', nomeST: 'ANTARTIDE', ciclo: 'IN LINEA', via: 'Via Pingu 97', postiTot: 3, postiDisp: 0, ebike: 3, preseAuto: 1}
+        {
+          nomeG: 'TUC',
+          nomeST: 'BABILONIA',
+          ciclo: 'IN LINEA',
+          via: 'Via Pingu 18',
+          postiTot: 7,
+          postiDisp: 5,
+          ebike: 1,
+          preseAuto: 1,
+          posto: ['Bike pubblica normale', 'Bike pubblica elettrica', 'Ricarica bike privata', 'Ricarica bike pubblica o privata', 'Ricarica veicolo elettrico'],
+          stato: ['Non elettrica', 'Carica', 'In carica', 'Fuori servizio', 'Prenotato']
+        },
+        {nomeG: 'TUC', nomeST: 'ANTARTIDE', ciclo: 'IN LINEA', via: 'Via Pingu 97', postiTot: 3, postiDisp: 0, ebike: 3, preseAuto: 1, posto: ['Bike pubblica elettrica'], stato: ['Carica']}
       ],
       [
-        {nomeG: 'TUC2', nomeST: 'abba2', ciclo: 'as', via: 'ds', postiTot: 2, postiDisp: 1, ebike: 2, preseAuto: 0},
-        {nomeG: 'TUC2', nomeST: 'assa2', ciclo: 'sa', via: 'sa', postiTot: 3, postiDisp: 0, ebike: 3, preseAuto: 1}
+        {nomeG: 'TUC2', nomeST: 'abba2', ciclo: 'as', via: 'ds', postiTot: 2, postiDisp: 1, ebike: 2, preseAuto: 0, posto: ['Bike pubblica elettrica'], stato: ['Carica']},
+        {nomeG: 'TUC2', nomeST: 'assa2', ciclo: 'sa', via: 'sa', postiTot: 3, postiDisp: 0, ebike: 3, preseAuto: 1, posto: ['Bike pubblica elettrica'], stato: ['Carica']}
       ]
     ],
     movements: [
