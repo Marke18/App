@@ -5,7 +5,7 @@
   <b-form @submit="updateCredito">
 
     <div style="font-weight: bold;margin-bottom:6vh;">
-      <b-container class="bv-example-row" style="margin: 8vh 0;">
+      <b-container class="bv-example-row" style="margin: 0 0 8vh 0;">
         <b-row>
           <b-col cols="8" style="padding:0">Credito residuo</b-col>
           <b-col cols="4">€ {{credito}}</b-col>
