@@ -1,14 +1,10 @@
 <template>
 
 <div class="head">
-  <div style="height: 2.5vh;">
-  </div>
-  <div style="height: 5vh;">
-    <b-navbar toggleable="xs" type="light" variant="faded">
-      <b-navbar-brand href="#" @click="Torna()">
-        <img src="../assets/arrow_left.png" width="30" height="30" alt="BV">
-      </b-navbar-brand>
-    </b-navbar>
+  <div class="freccia">
+    <a href="#" @click="Torna()">
+      <img src="../assets/arrow_left.png" width="30" height="30" alt="BV">
+    </a>
   </div>
 </div>
 
@@ -31,11 +27,13 @@ export default {
 
 <style scoped>
 
-.head {
-  min-height: 30px;
-  height: 12vh;
-  max-height: 80px;
-  margin: 0;
+.freccia {
+	cursor: pointer;
+	height: 27px;
+	left: 22px;
+	position: absolute;
+	top: 17px;
+	width: 33px;
 }
 
 </style>

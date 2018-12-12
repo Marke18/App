@@ -1,23 +1,19 @@
 <template>
 
 <div class="head">
-  <div style="height: 2.5vh;">
-  </div>
-  <div style="height: 5vh;">
-      <slide>
-        <a href="#" @click="Panoramica()">Home<img src="../assets/home.jpg" width="30" height="30" alt="BV"></a>
-        <a href="#" @click="ElencoGestori()">Elenco Gestori</a>
-        <a href="#" @click="ElencoStazioni()">Elenco Stazioni</a>
+  <slide>
+    <a href="#" @click="Panoramica()">Home<img src="../assets/home.jpg" width="30" height="30" alt="BV"></a>
+    <a href="#" @click="ElencoGestori()">Elenco Gestori</a>
+    <a href="#" @click="ElencoStazioni()">Elenco Stazioni</a>
 
-        <a href="#" @click="Accedi()" v-show="user === ''">Accedi<img src="../assets/arrow_right.png" width="30" height="30" alt="BV"></a>
-        <a href="#" @click="bodyRegistrati()" v-show="user === ''">Registrati<img src="../assets/plus.png" width="30" height="30" alt="BV"></a>
+    <a href="#" @click="Accedi()" v-show="user === ''">Accedi<img src="../assets/arrow_right.png" width="30" height="30" alt="BV"></a>
+    <a href="#" @click="bodyRegistrati()" v-show="user === ''">Registrati<img src="../assets/plus.png" width="30" height="30" alt="BV"></a>
 
-        <a href="#" @click="Credito()" v-show="user !== ''">Credito</a>
-        <a href="#" @click="Statistiche()" v-show="user !== ''">Statistiche</a>
-        <a href="#" @click="Profilo()" v-show="user !== ''">Profilo<img src="../assets/profile.png" width="30" height="30" alt="BV"></a>
-        <a href="#" @click="navbarPubblica()" v-show="user !== ''">Esci<img src="../assets/arrow_right.png" width="30" height="30" alt="BV"></a>
-      </slide>
-  </div>
+    <a href="#" @click="Credito()" v-show="user !== ''">Credito</a>
+    <a href="#" @click="Statistiche()" v-show="user !== ''">Statistiche</a>
+    <a href="#" @click="Profilo()" v-show="user !== ''">Profilo<img src="../assets/profile.png" width="30" height="30" alt="BV"></a>
+    <a href="#" @click="navbarPubblica()" v-show="user !== ''">Esci<img src="../assets/arrow_right.png" width="30" height="30" alt="BV"></a>
+  </slide>
 </div>
 
 </template>
@@ -83,10 +79,18 @@ export default {
 }
 
 .head {
-  min-height: 30px;
-  height: 12vh;
-  max-height: 80px;
+  min-height: 60px;
   margin: 0;
+  background-color: #FFFFFF;
+}
+
+.bm-burger-button {
+	cursor: pointer;
+	height: 27px;
+	left: 25px;
+	position: absolute;
+	top: 18px;
+	width: 33px;
 }
 
 </style>
