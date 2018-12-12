@@ -9,19 +9,12 @@
     <div id="app">
 
       <!-- Menu -->
-      <navbar v-show="body !== 'Dettaglio' && body !== 'DettaglioMovimento' && body !== 'DettaglioRicarica'" :body.sync="body" :user.sync="user" :nome-gestore.sync="nomeGestore"></navbar>
-      <navbar-torna v-show="body === 'Dettaglio' || body === 'DettaglioMovimento' || body === 'DettaglioRicarica'" :body.sync="body"></navbar-torna>
+      <navbar v-show="body !== 'Dettaglio' && body !== 'DettaglioMovimento' && body !== 'DettaglioRicarica' && body !== 'DettaglioMappa'" :body.sync="body" :user.sync="user" :nome-gestore.sync="nomeGestore"></navbar>
+      <navbar-torna v-show="body === 'Dettaglio' || body === 'DettaglioMovimento' || body === 'DettaglioRicarica' || body === 'DettaglioMappa'" :body.sync="body"></navbar-torna>
 
       <div style="margin: 1.5vh; height: 80vh; overflow: scroll;">
 
-        <!-- Area Pubblica -->
-        <registrati v-show="body === 'Registrati'" :body.sync="body"></registrati>
-
-        <accedi v-show="body === 'Accedi'" :user.sync="user" :body.sync="body" :nome-gestore.sync="nomeGestore"></accedi>
-
-        <recupera v-show="body === 'Recupera'" :body.sync="body"></recupera>
-
-        <home v-show="body === 'Home'"></home>
+        <home v-show="body === 'Home'" :managers="managers" :stations="stations[indiceStazione]" :nome-gestore.sync="nomeGestore" :body.sync="body" :station-d.sync="stationD"></home>
 
         <elenco-gestori :managers="managers" v-show="body === 'ElencoGestori'"></elenco-gestori>
 
@@ -29,7 +22,14 @@
 
         <elenco-stazioni :stations="stations[indiceStazione]" v-show="body === 'ElencoStazioni'"></elenco-stazioni>
 
-        <dettaglio :station-d="stationD" :user="user" :account="account" :codice-colonna="codiceColonna" :body.sync="body" :nome-gestore.sync="nomeGestore" v-show="body === 'Dettaglio'"></dettaglio>
+        <dettaglio :station-d="stationD" :user="user" :account="account" :codice-colonna="codiceColonna" :body.sync="body" :nome-gestore.sync="nomeGestore" v-show="body === 'Dettaglio' || body === 'DettaglioMappa'"></dettaglio>
+
+        <!-- Area Pubblica -->
+        <registrati v-show="body === 'Registrati'" :body.sync="body"></registrati>
+
+        <accedi v-show="body === 'Accedi'" :user.sync="user" :body.sync="body" :nome-gestore.sync="nomeGestore"></accedi>
+
+        <recupera v-show="body === 'Recupera'" :body.sync="body"></recupera>
 
         <!-- Area Privata -->
         <profilo :account="account" v-show="body === 'Profilo'"></profilo>

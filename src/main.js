@@ -10,6 +10,8 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import { Swipe, SwipeItem } from 'vue-swipe'
 import { Slide } from 'vue-burger-menu'
+import { L } from 'vue2-leaflet'
+import 'leaflet/dist/leaflet.css'
 
 // Menu
 import Navbar from './components/Navbar.vue'
@@ -73,6 +75,14 @@ Vue.component('elenco-stazioni-intero', ElencoStazioniIntero)
 Vue.component('dettaglio-ricarica', DettaglioRicarica)
 Vue.component('dettaglio-movimento', DettaglioMovimento)
 
+delete L.Icon.Default.prototype._getIconUrl
+
+L.Icon.Default.mergeOptions({
+  iconRetinaUrl: require('leaflet/dist/images/marker-icon-2x.png'),
+  iconUrl: require('leaflet/dist/images/marker-icon.png'),
+  shadowUrl: require('leaflet/dist/images/marker-shadow.png')
+})
+
 /* eslint-disable no-new */
 new Vue({
   el: '#footer',
@@ -131,8 +141,8 @@ window.app = new Vue({
       ebike: 0
     },
     managers: [
-      {nome: 'TUC', stazioni: 2, ricaricaBike: 2, ricaricaCar: 2},
-      {nome: 'TUC2', stazioni: 22, ricaricaBike: 22, ricaricaCar: 22}
+      {nome: 'TUC', stazioni: 2, ricaricaBike: 2, ricaricaCar: 2, coord: [45.584829, 10.441879]},
+      {nome: 'TUC2', stazioni: 22, ricaricaBike: 22, ricaricaCar: 22, coord: [45.68724, 10.449841]}
     ],
     stations: [
       [
@@ -146,13 +156,14 @@ window.app = new Vue({
           ebike: 1,
           preseAuto: 1,
           posto: ['Bike pubblica normale', 'Bike pubblica elettrica', 'Ricarica bike privata', 'Ricarica bike pubblica o privata', 'Ricarica veicolo elettrico'],
-          stato: ['Non elettrica', 'Carica', 'In carica', 'Fuori servizio', 'Prenotato']
+          stato: ['Non elettrica', 'Carica', 'In carica', 'Fuori servizio', 'Prenotato'],
+          coord: [45.584829, 10.441879]
         },
-        {nomeG: 'TUC', nomeST: 'ANTARTIDE', ciclo: 'IN LINEA', via: 'Via Pingu 97', postiTot: 3, postiDisp: 0, ebike: 3, preseAuto: 1, posto: ['Bike pubblica elettrica'], stato: ['Carica']}
+        {nomeG: 'TUC', nomeST: 'ANTARTIDE', ciclo: 'IN LINEA', via: 'Via Pingu 97', postiTot: 3, postiDisp: 0, ebike: 3, preseAuto: 1, posto: ['Bike pubblica elettrica'], stato: ['Carica'], coord: [45.584829, 10.444869]}
       ],
       [
-        {nomeG: 'TUC2', nomeST: 'abba2', ciclo: 'as', via: 'ds', postiTot: 2, postiDisp: 1, ebike: 2, preseAuto: 0, posto: ['Bike pubblica elettrica'], stato: ['Carica']},
-        {nomeG: 'TUC2', nomeST: 'assa2', ciclo: 'sa', via: 'sa', postiTot: 3, postiDisp: 0, ebike: 3, preseAuto: 1, posto: ['Bike pubblica elettrica'], stato: ['Carica']}
+        {nomeG: 'TUC2', nomeST: 'abba2', ciclo: 'as', via: 'ds', postiTot: 2, postiDisp: 1, ebike: 2, preseAuto: 0, posto: ['Bike pubblica elettrica'], stato: ['Carica'], coord: [45.584829, 10.441879]},
+        {nomeG: 'TUC2', nomeST: 'assa2', ciclo: 'sa', via: 'sa', postiTot: 3, postiDisp: 0, ebike: 3, preseAuto: 1, posto: ['Bike pubblica elettrica'], stato: ['Carica'], coord: [45.588461, 10.438923]}
       ]
     ],
     movements: [
@@ -179,8 +190,6 @@ window.app = new Vue({
       var i
       for (i = 0; i < this.stations.length; i++) {
         if (this.nomeGestore === this.stations[i][0].nomeG) {
-          // eslint-disable-next-line
-          this.body = 'ElencoStazioni'
           // eslint-disable-next-line
           this.indiceStazione = i
           return i

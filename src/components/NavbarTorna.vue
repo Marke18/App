@@ -19,6 +19,8 @@ export default {
     Torna () {
       if (this.body === 'Dettaglio') {
         this.$emit('update:body', 'ElencoStazioni')
+      } else if (this.body === 'DettaglioMappa') {
+        this.$emit('update:body', 'Home')
       } else {
         this.$emit('update:body', 'Statistiche')
       }

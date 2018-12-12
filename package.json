@@ -18,7 +18,8 @@
     "vue": "^2.5.2",
     "vue-burger-menu": "^1.0.9",
     "vue-router": "^3.0.1",
-    "vue-swipe": "^2.4.0"
+    "vue-swipe": "^2.4.0",
+    "vue2-leaflet": "^1.2.3"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",

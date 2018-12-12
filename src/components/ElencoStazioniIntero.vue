@@ -1,6 +1,6 @@
 <template>
 
-<div>
+<div style="height:auto;">
   <elenco-stazioni v-for="station in stations" :stations="station" v-bind:key="station.id"></elenco-stazioni>
 </div>
 

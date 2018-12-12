@@ -43,8 +43,11 @@ export default {
       this.$emit('update:nomeGestore', '')
     },
     ElencoStazioni () {
-      this.$emit('update:body', 'ElencoStazioniIntero')
-      this.$emit('update:nomeGestore', '')
+      if (this.nomeGestore === '') {
+        this.$emit('update:body', 'ElencoStazioniIntero')
+      } else {
+        this.$emit('update:body', 'ElencoStazioni')
+      }
     },
     Statistiche () {
       this.$emit('update:body', 'Statistiche')
@@ -84,6 +87,12 @@ export default {
   background-color: #007bff;
 }
 
+.home {
+  margin: 2.5vh 5%;
+  width: 90%;
+  height: 75vh;
+}
+
 .bm-burger-button {
   height: 27px;
   left: 25px;
@@ -97,6 +106,7 @@ export default {
 
 .bm-menu {
   background-color: #FFFFFF;
+  z-index: 10000;
 }
 
 </style>
