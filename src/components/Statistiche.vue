@@ -1,10 +1,14 @@
 <template>
 
 <div class="home" style="margin:0 5%;width:90%;">
-  <swipe class="my-swipe" auto="0">
+  <swipe class="my-swipe" auto="0" ref="mySwipe">
 
     <swipe-item>
-      <p class="tit">Movimenti effettuati</p>
+      <p class="tit">
+        <img src="../assets/arrow_left.png" width="15" style="margin:0 5px 2.5px 0;cursor: pointer;" @click="goto(1)">
+        Movimenti effettuati
+        <img src="../assets/arrow_right.png" width="15" style="margin:0 0 2.5px 5px;cursor: pointer;" @click="goto(1)">
+      </p>
       <div style="margin-bottom:5px;width:100%;height:65vh;overflow: scroll;">
           <b-container class="bv-example-row text-center" style="width:100%;font-size: 10px;font-weight: bold;">
             <b-list-group>
@@ -22,7 +26,11 @@
     </swipe-item>
 
     <swipe-item>
-      <p class="tit">Ricariche effettuate</p>
+      <p class="tit">
+        <img src="../assets/arrow_left.png" width="15" style="margin:0 5px 2.5px 0;cursor: pointer;" @click="goto(0)">
+        Ricariche effettuate
+        <img src="../assets/arrow_right.png" width="15" style="margin:0 0 2.5px 5px;cursor: pointer;" @click="goto(0)">
+      </p>
       <div style="margin-bottom:5px;width:100%;height:65vh;overflow: scroll;">
         <b-container class="bv-example-row text-center" style="width:100%;font-size: 10px;font-weight: bold;">
           <b-list-group>
@@ -47,7 +55,12 @@
 
 export default {
   name: 'Statistiche',
-  props: ['movements', 'recharges']
+  props: ['movements', 'recharges'],
+  methods: {
+    goto(index) {
+      this.$refs.mySwipe.goto(index);
+    },
+  }
 }
 
 </script>
