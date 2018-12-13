@@ -74,7 +74,7 @@
       </b-container>
     </div>
 
-    <div class="text-center" style="margin: 2vh 0 3vh -5%;">
+    <div class="text-center" style="margin: 2vh 0 3vh 0;">
       <b-btn @click="Login()" v-if="user === ''">Login</b-btn>
 
       <b-btn @click="console.log('ciao')" v-b-modal.modal-center v-if="user !== ''">Accedi alla stazione</b-btn>

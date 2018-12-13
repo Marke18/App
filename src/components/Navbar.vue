@@ -84,7 +84,7 @@ export default {
 .head {
   height: 78px;
   margin: 0;
-  background-image: url('../assets/menu.png');
+  background: #007bff url('../assets/menu.png') no-repeat;
 }
 
 .home {
