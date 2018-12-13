@@ -82,13 +82,13 @@ export default {
 }
 
 .head {
-  height: 60px;
+  height: 78px;
   margin: 0;
-  background-color: #007bff;
+  background-image: url('../assets/menu.png');
 }
 
 .home {
-  margin: 2.5vh 5%;
+  margin: 0 5% 2.5vh 5%;
   width: 90%;
   height: 75vh;
 }

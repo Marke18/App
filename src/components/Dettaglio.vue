@@ -60,12 +60,11 @@
             </div>
 
             <div v-else>
-              <b-list-group-item class="d-flex justify-content-between align-items-center" :style="style">
+              <b-list-group-item class="d-flex justify-content-between align-items-center">
                 <b-row class="text-center" style="width:200%;">
-                  <b-col cols="12"><img src="../assets/bike.jpg" width="50" height="50" alt="BV"><br>
+                  <b-col cols="12" style="color:grey;font-style:italic;">
                     POSTO {{n}}<br>Vuoto
                   </b-col>
-                  <b-col cols="12"><img src="../assets/bike.jpg" width="50" height="50" alt="BV"></b-col>
                 </b-row>
               </b-list-group-item>
             </div>
@@ -128,8 +127,7 @@ export default {
   data () {
     return {
       conferma: false,
-      codice: '',
-      style: {backgroundColor: 'grey'}
+      codice: ''
     }
   },
   methods: {
