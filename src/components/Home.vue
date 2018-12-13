@@ -3,11 +3,35 @@
 <div class="home">
   <l-map :zoom="zoom" :center="center">
     <l-tile-layer :url="url"></l-tile-layer>
-    <div v-for="manager in managers" v-if="nomeGestore === ''">
-      <l-marker :lat-lng="manager.coord" @click="MappaGestore(manager.nome)"></l-marker>
-    </div>
-    <div v-for="station in stations" v-else>
-      <l-marker :lat-lng="station.coord" @click="Dettaglio(station)"></l-marker>
+    <div v-for="manager in managers" v-bind:key="manager.id">
+      <l-marker :lat-lng="manager.coord" @click="Gestore(manager.nome)">
+        <l-popup>
+
+          <b-list-group>
+
+            <b-list-group-item class="text-center" href="#" @click="DettaglioGestore()" active>
+              <span>{{manager.nome}}</span>
+            </b-list-group-item>
+
+            <b-list-group-item class="d-flex justify-content-between align-items-center" href="#" @click="DettaglioGestore()" v-if="manager.stazioni > 0">
+              <span>STAZIONI BIKE-SHARING</span>
+              <b-badge variant="primary" pill>{{manager.stazioni}}</b-badge>
+            </b-list-group-item>
+
+            <b-list-group-item class="d-flex justify-content-between align-items-center" href="#" @click="DettaglioGestore()" v-if="manager.ricaricaBike > 0">
+              <span>RICARICA BIKE PRIVATE</span>
+              <b-badge variant="primary" pill>{{manager.ricaricaBike}}</b-badge>
+            </b-list-group-item>
+
+            <b-list-group-item class="d-flex justify-content-between align-items-center" href="#" @click="DettaglioGestore()" v-if="manager.ricaricaCar > 0">
+              <span>RICARICA CAR PRIVATE</span>
+              <b-badge variant="primary" pill>{{manager.ricaricaCar}}</b-badge>
+            </b-list-group-item>
+
+          </b-list-group>
+
+        </l-popup>
+      </l-marker>
     </div>
   </l-map>
 </div>
@@ -16,14 +40,15 @@
 
 <script>
 
-import { LMap, LTileLayer, LMarker } from 'vue2-leaflet'
+import { LMap, LTileLayer, LMarker, LPopup } from 'vue2-leaflet'
 
 export default {
   name: 'Home',
   components: {
     LMap,
     LTileLayer,
-    LMarker
+    LMarker,
+    LPopup
   },
   data () {
     return {
@@ -32,14 +57,13 @@ export default {
       center: [45.584829, 10.441879]
     }
   },
-  props: ['managers', 'nomeGestore', 'stations', 'body', 'stationD'],
+  props: ['managers', 'nomeGestore', 'body'],
   methods: {
-    MappaGestore (txt) {
+    Gestore (txt) {
       this.$emit('update:nomeGestore', txt)
     },
-    Dettaglio (txt) {
-      this.$emit('update:stationD', txt)
-      this.$emit('update:body', 'DettaglioMappa')
+    DettaglioGestore () {
+      this.$emit('update:body', 'ElencoStazioni')
     }
   }
 }
@@ -47,15 +71,9 @@ export default {
 </script>
 
 <style>
-/*
-.leaflet-left {
-	right: 0;
-  left: auto;
+
+.leaflet-container a {
+  color: #495057;
 }
 
-.leaflet-left .leaflet-control {
-	margin-right: 10px;
-  margin-left: auto;
-}
-*/
 </style>

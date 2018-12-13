@@ -14,7 +14,7 @@
 
       <div style="margin: 1.5vh; height: 80vh; overflow: scroll;">
 
-        <home v-show="body === 'Home'" :managers="managers" :stations="stations[indiceStazione]" :nome-gestore.sync="nomeGestore" :body.sync="body" :station-d.sync="stationD"></home>
+        <home v-show="body === 'Home'" :managers="managers" :nome-gestore.sync="nomeGestore" :body.sync="body"></home>
 
         <elenco-gestori :managers="managers" v-show="body === 'ElencoGestori'"></elenco-gestori>
 

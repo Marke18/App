@@ -56,11 +56,7 @@
 
           <div v-for="n in stationD.postiTot" v-bind:key="n">
             <div v-if="n <= stationD.postiDisp">
-              <posto-stato :n="n" :stationD="stationD" :style1="{backgroundColor:'white'}" v-if="stationD.stato[n-1] === 'Non elettrica'"></posto-stato>
-              <posto-stato :n="n" :stationD="stationD" :style1="{backgroundColor:'green'}" v-if="stationD.stato[n-1] === 'Carica'"></posto-stato>
-              <posto-stato :n="n" :stationD="stationD" :style1="{backgroundColor:'yellow'}" v-if="stationD.stato[n-1] === 'In carica'"></posto-stato>
-              <posto-stato :n="n" :stationD="stationD" :style1="{backgroundColor:'red'}" v-if="stationD.stato[n-1] === 'Fuori servizio'"></posto-stato>
-              <posto-stato :n="n" :stationD="stationD" :style1="{backgroundColor:'blue'}" v-if="stationD.stato[n-1] === 'Prenotato'"></posto-stato>
+              <posto-stato :n="n" :stationD="stationD"></posto-stato>
             </div>
 
             <div v-else>
