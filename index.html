@@ -9,10 +9,9 @@
     <div id="app">
 
       <!-- Menu -->
-      <navbar v-show="body !== 'Dettaglio' && body !== 'DettaglioMovimento' && body !== 'DettaglioRicarica' && body !== 'DettaglioMappa'" :body.sync="body" :user.sync="user" :nome-gestore.sync="nomeGestore"></navbar>
-      <navbar-torna v-show="body === 'Dettaglio' || body === 'DettaglioMovimento' || body === 'DettaglioRicarica' || body === 'DettaglioMappa'" :body.sync="body"></navbar-torna>
+      <navbar :body.sync="body" :user.sync="user" :nome-gestore.sync="nomeGestore"></navbar>
 
-      <div style="margin: 1.5vh; height: 80vh; overflow: scroll;">
+      <div style="margin: 1.5vh; height: 77vh; overflow: scroll;">
 
         <home v-show="body === 'Home'" :managers="managers" :nome-gestore.sync="nomeGestore" :body.sync="body"></home>
 

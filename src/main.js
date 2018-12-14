@@ -15,7 +15,6 @@ import 'leaflet/dist/leaflet.css'
 
 // Menu
 import Navbar from './components/Navbar.vue'
-import NavbarTorna from './components/NavbarTorna.vue'
 
 // Area Pubblica
 import Home from './components/Home.vue'
@@ -51,7 +50,6 @@ Vue.component('slide', Slide)
 
 // Menu
 Vue.component('navbar', Navbar)
-Vue.component('navbar-torna', NavbarTorna)
 
 // Area Pubblica
 Vue.component('home', Home)
