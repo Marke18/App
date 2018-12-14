@@ -25,7 +25,7 @@
   </div>
 
   <radial-menu
-    style="margin: auto; position: absolute; top: 82vh; left: 50%; background-color: white; z-index: 1000;"
+    style="margin: auto; position: absolute; top: 80vh; left: 50%; background-color: white; z-index: 1000; margin-left: -25px;"
     :itemSize="50"
     :radius="120"
     :angle-restriction="180">
