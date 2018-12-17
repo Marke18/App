@@ -63,7 +63,7 @@ export default {
       this.$emit('update:nomeGestore', txt)
     },
     DettaglioGestore () {
-      this.$emit('update:body', 'ElencoStazioni')
+      this.$emit('update:body', 'ElencoStazioniIntero')
     }
   }
 }
