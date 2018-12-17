@@ -96,7 +96,8 @@ new Vue({
       backgroundColor: '#007bff',
       color: '#FFFFFF',
       margin: '0',
-      padding: '2px'
+      padding: '2px',
+      zIndex: 401
     }
   }
 })
@@ -108,22 +109,22 @@ window.app = new Vue({
     body: 'Home',
     user: '',
     account: {
-      nome: 'asdasdad',
-      cognome: 'dasdasd',
-      dataNascita: 'dasdasdasd',
-      luogoNascita: 'dsadsa',
-      nazionalita: 'ita',
-      cf: 'dasdasdas',
-      tipoDoc: 'PayPal',
-      nDoc: 'dasdasdas',
-      indResidenza: 'asdasdasd',
-      cell: '312312312',
-      email: 'lollo@i.i',
+      nome: 'Filippo',
+      cognome: 'Luzzi',
+      dataNascita: 'XX/XX/XXXX',
+      luogoNascita: 'Rovereto',
+      nazionalita: 'Italiana',
+      cf: 'XXXXXXXXXXXXXXXX',
+      tipoDoc: "Carta d'identità",
+      nDoc: 'XX XXXXXXX',
+      indResidenza: 'Rovereto',
+      cell: 'XXX XXXXXXX',
+      email: 'nome.cognome@gmail.com',
       gestore: 'Gestore1',
       contratto: 'Contratto1',
-      username: 'abba',
-      password: 'asdasda',
-      credito: 0
+      username: 'Luzzi01',
+      password: 'lollo87',
+      credito: 10
     },
     codiceColonna: '1234567890',
     nomeGestore: '',
@@ -139,31 +140,61 @@ window.app = new Vue({
       ebike: 0
     },
     managers: [
-      {nome: 'TUC', stazioni: 2, ricaricaBike: 2, ricaricaCar: 2, coord: [45.584829, 10.441879]},
-      {nome: 'TUC2', stazioni: 22, ricaricaBike: 22, ricaricaCar: 22, coord: [45.68724, 10.449841]}
+      {nome: 'Comunità Val di Sole', stazioni: 4, ricaricaBike: 0, ricaricaCar: 0, coord: [45.584829, 10.441879]},
+      {nome: 'Comune di Riva del Garda', stazioni: 6, ricaricaBike: 0, ricaricaCar: 6, coord: [45.68724, 10.449841]}
     ],
     stations: [
       [
         {
-          nomeG: 'TUC',
-          nomeST: 'BABILONIA',
+          nomeG: 'Comunità Val di Sole',
+          nomeST: 'Molè',
           ciclo: 'IN LINEA',
-          via: 'Via Pingu 18',
-          postiTot: 7,
-          postiDisp: 5,
-          ebike: 1,
-          preseAuto: 1,
-          posto: ['Bike pubblica normale', 'Bike pubblica elettrica', 'Ricarica bike privata', 'Ricarica bike pubblica o privata', 'Ricarica veicolo elettrico'],
-          stato: ['Non elettrica', 'Carica', 'In carica', 'Fuori servizio', 'Prenotato'],
-          coord: [45.584829, 10.441879]
+          via: 'Via 4 Novembre',
+          postiTot: 8,
+          postiDisp: 6,
+          ebike: 2,
+          preseAuto: 0,
+          posto: ['Bike pubblica elettrica', 'Bike pubblica elettrica'],
+          stato: ['Carica', 'Carica']
         },
         {
-          nomeG: 'TUC', nomeST: 'ANTARTIDE', ciclo: 'IN LINEA', via: 'Via Pingu 97', postiTot: 3, postiDisp: 0, ebike: 3, preseAuto: 1, posto: ['Bike pubblica elettrica'], stato: ['Carica'], coord: [45.584829, 10.444869]
+          nomeG: 'Comunità Val di Sole',
+          nomeST: 'Mezzana',
+          ciclo: 'In Linea',
+          via: 'Via per Marileva',
+          postiTot: 8,
+          postiDisp: 5,
+          ebike: 2,
+          preseAuto: 0,
+          posto: ['Bike pubblica normale', 'Bike pubblica elettrica'],
+          stato: ['Non elettrica', 'Fuori servizio']
         }
       ],
       [
-        {nomeG: 'TUC2', nomeST: 'abba2', ciclo: 'as', via: 'ds', postiTot: 2, postiDisp: 1, ebike: 2, preseAuto: 0, posto: ['Bike pubblica elettrica'], stato: ['Carica'], coord: [45.584829, 10.441879]},
-        {nomeG: 'TUC2', nomeST: 'assa2', ciclo: 'sa', via: 'sa', postiTot: 3, postiDisp: 0, ebike: 3, preseAuto: 1, posto: ['Bike pubblica elettrica'], stato: ['Carica'], coord: [45.588461, 10.438923]}
+        {
+          nomeG: 'Comune di Riva del Garda',
+          nomeST: 'Pingu',
+          ciclo: 'In Linea',
+          via: 'Via per Marileva',
+          postiTot: 8,
+          postiDisp: 6,
+          ebike: 2,
+          preseAuto: 0,
+          posto: ['Bike pubblica normale', 'Bike pubblica elettrica', 'Ricarica bike privata', 'Ricarica bike pubblica o privata', 'Ricarica veicolo elettrico'],
+          stato: ['Non elettrica', 'Carica', 'In carica', 'Fuori servizio', 'Prenotato']
+        },
+        {
+          nomeG: 'Comune di Riva del Garda',
+          nomeST: 'Lollo',
+          ciclo: 'In Linea',
+          via: 'Via per Marileva',
+          postiTot: 8,
+          postiDisp: 6,
+          ebike: 2,
+          preseAuto: 0,
+          posto: ['Bike pubblica normale', 'Bike pubblica elettrica', 'Ricarica bike privata', 'Ricarica bike pubblica o privata', 'Ricarica veicolo elettrico'],
+          stato: ['Non elettrica', 'Carica', 'In carica', 'Fuori servizio', 'Prenotato']
+        }
       ]
     ],
     movements: [
@@ -190,8 +221,6 @@ window.app = new Vue({
       var i
       for (i = 0; i < this.stations.length; i++) {
         if (this.nomeGestore === this.stations[i][0].nomeG) {
-          // eslint-disable-next-line
-          this.indiceStazione = i
           return i
         }
       }

@@ -2,7 +2,7 @@
 
 <div class="home">
 
-  <b-form @submit="onSubmit" v-if="show">
+  <b-form @submit="onSubmit" style="margin: 0 5%;" v-if="show">
     <h1 class="text-center" style="margin:3vh 0 6vh 0;">Registrati</h1>
 
     <b-form-group id="nome"

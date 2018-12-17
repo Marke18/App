@@ -2,7 +2,7 @@
 
 <div class="home">
   <div v-if="!conferma">
-    <h3 class="text-center" style="margin: 5vh 0;"> Dettaglio Ciclo-Stazione </h3>
+    <h5 class="text-center" style="margin: 5vh 0;"> Dettaglio Ciclo-Stazione </h5>
     <div style="margin: 2vh 0;">
 
       <b-container class="bv-example-row">
@@ -55,7 +55,7 @@
           <b-list-group-item class="text-center" active>STATO CICLO-STAZIONE</b-list-group-item>
 
           <div v-for="n in stationD.postiTot" v-bind:key="n">
-            <div v-if="n <= stationD.postiDisp">
+            <div v-if="stationD.posto[n-1] !== undefined">
               <posto-stato :n="n" :stationD="stationD"></posto-stato>
             </div>
 
