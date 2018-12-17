@@ -57,9 +57,9 @@ export default {
   name: 'Statistiche',
   props: ['movements', 'recharges'],
   methods: {
-    goto(index) {
-      this.$refs.mySwipe.goto(index);
-    },
+    goto (index) {
+      this.$refs.mySwipe.goto(index)
+    }
   }
 }
 
