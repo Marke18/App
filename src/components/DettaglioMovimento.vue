@@ -1,9 +1,9 @@
 <template>
 
 <div class="home">
-  <h2 class="text-center">Dettaglio</h2>
+  <h2 class="text-center" style="margin-bottom: 10vh;">Dettaglio</h2>
 
-  <div style="margin-top:10vh;">
+  <b-container>
     <b-row>
       <b-col cols="6">ID Prenotazione:</b-col>
       <b-col>{{dettaglio.id_prenotazione}}</b-col>
@@ -43,7 +43,7 @@
       <b-col cols="6">Costo:</b-col>
       <b-col>{{dettaglio.costo}}</b-col>
     </b-row>
-  </div>
+  </b-container>
 
 </div>
 

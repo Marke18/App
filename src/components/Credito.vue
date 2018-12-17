@@ -1,11 +1,11 @@
 <template>
 
-<div class="home">
+<div class="home" style="margin: 2.5vh 10%; width: 80%;">
 
   <b-form @submit="updateCredito">
 
-    <div style="font-weight: bold;margin-bottom:6vh;">
-      <b-container class="bv-example-row" style="margin: 0 0 8vh 0;">
+    <div style="font-weight: bold;margin-bottom:4vh;">
+      <b-container class="bv-example-row" style="margin: 0 0 6vh 0;">
         <b-row>
           <b-col cols="8" style="padding:0">Credito residuo</b-col>
           <b-col cols="4">€ {{credito}}</b-col>
@@ -72,15 +72,9 @@ export default {
 
 <style scoped>
 
-.home {
-  margin: 0 10%;
-  width: 80%;
-}
-
 .input {
-  width: 100%;
-  min-height: 40px;
-  height: 3vh;
+  width: 90%;
+  height: 40px;
 }
 
 </style>

@@ -1,6 +1,6 @@
 <template>
 
-<div class="home" style="margin:0 5%;width:90%;">
+<div class="home">
   <swipe class="my-swipe" auto="0" ref="mySwipe">
 
     <swipe-item>
@@ -9,7 +9,7 @@
         Movimenti effettuati
         <img src="../assets/arrow_right.png" width="15" style="margin:0 0 2.5px 5px;cursor: pointer;" @click="goto(1)">
       </p>
-      <div style="margin-bottom:5px;width:100%;height:65vh;overflow: scroll;">
+      <div style="margin-bottom:5px;width:100%;height: 85%;overflow: scroll;">
           <b-container class="bv-example-row text-center" style="width:100%;font-size: 10px;font-weight: bold;">
             <b-list-group>
               <b-list-group-item active class="flex-column align-items-start">
@@ -31,7 +31,7 @@
         Ricariche effettuate
         <img src="../assets/arrow_right.png" width="15" style="margin:0 0 2.5px 5px;cursor: pointer;" @click="goto(0)">
       </p>
-      <div style="margin-bottom:5px;width:100%;height:65vh;overflow: scroll;">
+      <div style="margin-bottom:5px;width:100%;height: 85%;overflow: scroll;">
         <b-container class="bv-example-row text-center" style="width:100%;font-size: 10px;font-weight: bold;">
           <b-list-group>
             <b-list-group-item active class="flex-column align-items-start">
@@ -68,14 +68,14 @@ export default {
 <style scoped>
 
 .tit {
-  margin: 3vh 0;
+  margin: 0 0 3vh 0;
   font-weight: bold;
 }
 
 .my-swipe {
   text-align: center;
   width: 100%;
-  height: 70vh;
+  height: 100%;
 }
 
 </style>

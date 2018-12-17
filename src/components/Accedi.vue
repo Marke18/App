@@ -1,13 +1,13 @@
 <template>
 
-<div class="home text-center" style="margin: 0 15%;width:70%;">
+<div class="home text-center">
 
   <b-form @submit="bodyHome()">
-    <h1 style="margin:4.5vh 0 10vh 0;">Accedi</h1>
+    <h1 style="margin:4.5vh 0 8vh 0;">Accedi</h1>
     <b-form-group id="username"
                   label="Username:"
                   label-for="usernameI"
-                  style="text-align:left;">
+                  style="text-align:left;	width: 80%; margin: auto;">
       <b-form-input id="usernameI"
                     type="text"
                     v-model="username"
@@ -20,7 +20,7 @@
     <b-form-group id="password"
                   label="Password:"
                   label-for="passwordI"
-                  style="text-align:left;">
+                  style="text-align:left;	width: 80%; margin: 5vh auto;">
       <b-form-input id="passwordI"
                     type="password"
                     v-model="password"
@@ -32,7 +32,7 @@
     <b-button type="submit">Accedi</b-button>
   </b-form>
 
-  <div style="text-align:left;margin:5vh -15% 0 -15%;">
+  <div style="text-align:left;margin-top:5vh">
     <b-btn @click="Recupera()" variant="link" style="font-size: 13px;">Recupera username e password</b-btn>
     <br>
     <b-btn @click="Registrati()" variant="link" style="font-size: 13px;">Non sei ancora registrato</b-btn>
@@ -70,11 +70,5 @@ export default {
 </script>
 
 <style scoped>
-
-.input {
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
-}
 
 </style>

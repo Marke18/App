@@ -92,7 +92,7 @@ new Vue({
       position: 'absolute',
       bottom: '0',
       textDecoration: 'underline',
-      fontSize: '10px',
+      fontSize: '9px',
       backgroundColor: '#007bff',
       color: '#FFFFFF',
       margin: '0',

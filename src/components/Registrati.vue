@@ -159,31 +159,26 @@
       </b-form-input>
     </b-form-group>
 
-    <b-row>
-      <b-col>
-      <b-form-group id="gestore"
-                    label="Gestore:"
-                    label-for="gestoreI">
-        <b-form-select id="gestoreI"
-                       class="mb-3 input"
-                       v-model="account_reg.gestore"
-                       :options="optionsG"
-                       required/>
-      </b-form-group>
-      </b-col>
+    <b-form-group id="gestore"
+                  label="Gestore:"
+                  label-for="gestoreI">
+      <b-form-select id="gestoreI"
+                     class="mb-3 input"
+                     v-model="account_reg.gestore"
+                     :options="optionsG"
+                     required/>
+    </b-form-group>
 
-      <b-col>
-        <b-form-group id="contratto"
-                      label="Contratto:"
-                      label-for="contrattoI">
-          <b-form-select id="contrattoI"
-                         class="mb-3 input"
-                         v-model="account_reg.contratto"
-                         :options="optionsC"
-                         required/>
-         </b-form-group>
-      </b-col>
-    </b-row>
+    <b-form-group id="contratto"
+                  label="Contratto:"
+                  label-for="contrattoI">
+      <b-form-select id="contrattoI"
+                     class="mb-3 input"
+                     v-model="account_reg.contratto"
+                     :options="optionsC"
+                     required/>
+     </b-form-group>
+
     <b-form-checkbox v-model="account_reg.check1"
                      value="accepted"
                      unchecked-value="not_accepted"
@@ -197,13 +192,14 @@
                      required>
       Informativa Privacy <br>(link dinamico in funzione del Gestore selezionato)
     </b-form-checkbox>
+
     <div class="text-center" style="margin:8vh 0 5vh 0;">
       <b-button type="submit">Registrati</b-button>
     </div>
 
   </b-form>
 
-  <div class="text-center" style="margin: 2vh;" v-else>
+  <div class="text-center" v-else>
     <h1 style="margin: 7vh 0;">Registrazione completata</h1>
     <img src="../assets/right.png" width="30" height="30" alt="BV"><br>
     <p style="margin-top:10vh;">
@@ -278,12 +274,6 @@ export default {
 </script>
 
 <style scoped>
-
-.home {
-  margin: 0 10%;
-  width: 80%;
-  font-size: 15px;
-}
 
 .input {
   margin: 1vh 0;

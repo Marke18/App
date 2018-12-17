@@ -78,14 +78,10 @@ export default {
           break
         case 'Elenco Gestori':
           this.$emit('update:body', 'ElencoGestori')
-          this.$emit('update:nomeGestore', '')
           break
         case 'Elenco Stazioni':
-          if (this.nomeGestore === '') {
-            this.$emit('update:body', 'ElencoStazioniIntero')
-          } else {
-            this.$emit('update:body', 'ElencoStazioni')
-          }
+          this.$emit('update:body', 'ElencoStazioniIntero')
+          this.$emit('update:nomeGestore', '')
           break
         case 'Registrati':
           this.$emit('update:body', 'Registrati')
@@ -117,33 +113,33 @@ export default {
 <style>
 
 .head {
-  height: 78px;
-  margin: 0;
+  height: 50px;
+  margin: 0 0 2.5vh 0;
   background: #007bff url('../assets/menu.png') no-repeat;
 }
 
 .home {
-  margin: 2.5vh 5% 2.5vh 5%;
+  margin: 0 5% 2.5vh 5%;
   width: 90%;
-  height: 65vh;
+  height: 70vh;
+  overflow: scroll;
 }
 
 .vue-radial-menu-container {
-  border: 1px solid #000000
+  border: 1px solid #000000;
 }
 
 .vue-radial-menu-item {
 	font-size: 10px;
 	text-align: center;
+  border: 1px solid #000000;
 }
 
 .freccia {
   cursor: pointer;
-  height: 27px;
   right: 15px;
   position: absolute;
-  top: 24px;
-  width: 33px;
+  top: 11px;
 }
 
 </style>

@@ -11,15 +11,15 @@
       <!-- Menu -->
       <navbar :body.sync="body" :user.sync="user" :nome-gestore.sync="nomeGestore"></navbar>
 
-      <div style="margin: 0 1.5vh 0 1.5vh; height: 70vh; overflow: scroll;">
+      <div style="margin: 0 1.5vh 0 1.5vh; height: 77.5vh;">
 
         <home v-show="body === 'Home'" :managers="managers" :nome-gestore.sync="nomeGestore" :body.sync="body"></home>
 
         <elenco-gestori :managers="managers" v-show="body === 'ElencoGestori'"></elenco-gestori>
 
-        <elenco-stazioni-intero :stations="stations" v-show="body === 'ElencoStazioniIntero'"></elenco-stazioni-intero>
+        <elenco-stazioni-intero :stations="stations" :nome-gestore="nomeGestore" v-show="body === 'ElencoStazioniIntero'"></elenco-stazioni-intero>
 
-        <elenco-stazioni :stations="stations[indiceStazione]" v-show="body === 'ElencoStazioni'"></elenco-stazioni>
+        <elenco-stazioni :stations="stations[indiceStazione]" :nome-gestore="nomeGestore"  v-show="body === 'ElencoStazioni'"></elenco-stazioni>
 
         <dettaglio :station-d="stationD" :user="user" :account="account" :codice-colonna="codiceColonna" :body.sync="body" :nome-gestore.sync="nomeGestore" v-show="body === 'Dettaglio' || body === 'DettaglioMappa'"></dettaglio>
 

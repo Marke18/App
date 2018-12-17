@@ -1,7 +1,7 @@
 <template>
 
-<div style="height:auto;">
-  <elenco-stazioni v-for="station in stations" :stations="station" v-bind:key="station.id"></elenco-stazioni>
+<div class="home">
+  <elenco-stazioni v-for="station in stations" :nomeGestore="nomeGestore" :stations="station" v-bind:key="station.id"></elenco-stazioni>
 </div>
 
 </template>
@@ -10,7 +10,7 @@
 
 export default {
   name: 'ElencoStazioniIntero',
-  props: ['stations']
+  props: ['stations', 'nomeGestore']
 }
 
 </script>
