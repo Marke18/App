@@ -71,7 +71,7 @@ export default {
       }
     },
     handleClick (item) {
-      switch(item) {
+      switch (item) {
         case 'Home':
           this.$emit('update:body', 'Home')
           this.$emit('update:nomeGestore', '')
@@ -131,8 +131,8 @@ export default {
 }
 
 .vue-radial-menu-item {
-	font-size: 10px;
-	text-align: center;
+  font-size: 10px;
+  text-align: center;
   border: 1px solid #000000;
 }
 

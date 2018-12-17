@@ -77,7 +77,7 @@ export default {
 }
 
 .leaflet-bottom {
-	display: none;
+  display: none;
 }
 
 </style>

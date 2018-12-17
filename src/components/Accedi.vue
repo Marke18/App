@@ -3,11 +3,11 @@
 <div class="home text-center">
 
   <b-form @submit="bodyHome()">
-    <h3 style="margin:4.5vh 0 8vh 0;">Accedi</h3>
+    <h3 style="margin: 4.5vh 0 8vh 0;">Accedi</h3>
     <b-form-group id="username"
                   label="Username:"
                   label-for="usernameI"
-                  style="text-align:left;	width: 80%; margin: auto;">
+                  style="text-align:left;width: 80%; margin: auto;">
       <b-form-input id="usernameI"
                     type="text"
                     v-model="username"
@@ -20,7 +20,7 @@
     <b-form-group id="password"
                   label="Password:"
                   label-for="passwordI"
-                  style="text-align:left;	width: 80%; margin: 5vh auto;">
+                  style="text-align:left;width: 80%; margin: 5vh auto;">
       <b-form-input id="passwordI"
                     type="password"
                     v-model="password"
