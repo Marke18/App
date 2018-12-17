@@ -76,4 +76,8 @@ export default {
   color: #495057;
 }
 
+.leaflet-bottom {
+	display: none;
+}
+
 </style>
