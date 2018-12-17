@@ -1,7 +1,7 @@
 <template>
 
 <div class="stazione">
-  <h4 style="text-align:center;">{{stations[0].nomeG}}</h4>
+  <h5 style="text-align:center;">{{stations[0].nomeG}}</h5>
   <h6 style="text-align:center;margin-bottom:5vh;">Elenco delle Stazioni</h6>
   <station v-for="station in stations" :station="station" v-bind:key="station.id" style="margin: 3vh 5%;"></station>
 </div>
