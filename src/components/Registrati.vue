@@ -159,10 +159,10 @@
       </b-form-input>
     </b-form-group>
 
-    <div class="row">
-      <div class="col-xs-6" style="margin: 0 5%;">
+    <b-row>
+      <b-col>
       <b-form-group id="gestore"
-                    label="Scegliere il gestore:"
+                    label="Gestore:"
                     label-for="gestoreI">
         <b-form-select id="gestoreI"
                        class="mb-3 input"
@@ -170,11 +170,11 @@
                        :options="optionsG"
                        required/>
       </b-form-group>
-      </div>
+      </b-col>
 
-      <div class="col-xs-6" style="margin: 0 5%;">
+      <b-col>
         <b-form-group id="contratto"
-                      label="Scegliere il contratto:"
+                      label="Contratto:"
                       label-for="contrattoI">
           <b-form-select id="contrattoI"
                          class="mb-3 input"
@@ -182,8 +182,8 @@
                          :options="optionsC"
                          required/>
          </b-form-group>
-      </div>
-    </div>
+      </b-col>
+    </b-row>
     <b-form-checkbox v-model="account_reg.check1"
                      value="accepted"
                      unchecked-value="not_accepted"
@@ -197,7 +197,7 @@
                      required>
       Informativa Privacy <br>(link dinamico in funzione del Gestore selezionato)
     </b-form-checkbox>
-    <div class="text-right" style="margin:8vh 10% 5vh 0;">
+    <div class="text-center" style="margin:8vh 0 5vh 0;">
       <b-button type="submit">Registrati</b-button>
     </div>
 
@@ -247,16 +247,16 @@ export default {
       },
       show: true,
       options: [
-        { value: null, text: 'Scegliere il tipo di documento', disabled: true },
+        { value: null, text: 'Scegli il tipo di documento', disabled: true },
         { value: 'ts', text: 'Tessera sanitaria' },
         { value: 'ci', text: "Carta d'identità" }
       ],
       optionsG: [
-        { value: null, text: 'Scegliere il gestore', disabled: true },
+        { value: null, text: 'Scegli il gestore', disabled: true },
         { value: 'G1', text: 'Gestore 1' }
       ],
       optionsC: [
-        { value: null, text: 'Scegliere il contratto', disabled: true },
+        { value: null, text: 'Scegli il contratto', disabled: true },
         { value: 'C1', text: 'Contratto 1' }
       ]
     }
@@ -287,8 +287,7 @@ export default {
 
 .input {
   margin: 1vh 0;
-  min-height: 40px;
-  height: 3vh;
+  height: 40px;
 }
 
 </style>

@@ -75,7 +75,7 @@ export default {
 .my-swipe {
   text-align: center;
   width: 100%;
-  height: 78vh;
+  height: 70vh;
 }
 
 </style>

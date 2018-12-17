@@ -11,7 +11,7 @@
   </div>
 
   <radial-menu
-    style="margin: auto; position: absolute; top: 82vh; left: 50%; background-color: white; z-index: 1000; margin-left: -25px; cursor: pointer;"
+    style="margin: auto; position: absolute; top: 85vh; left: 50%; background-color: white; z-index: 1000; margin-left: -25px; cursor: pointer;"
     :itemSize="50"
     :radius="120"
     :angle-restriction="180"
@@ -26,7 +26,7 @@
   </radial-menu>
 
   <radial-menu
-    style="margin: auto; position: absolute; top: 82vh; left: 50%; background-color: white; z-index: 1000; margin-left: -25px; cursor: pointer;"
+    style="margin: auto; position: absolute; top: 85vh; left: 50%; background-color: white; z-index: 1000; margin-left: -25px; cursor: pointer;"
     :itemSize="50"
     :radius="120"
     :angle-restriction="180"
@@ -125,7 +125,11 @@ export default {
 .home {
   margin: 2.5vh 5% 2.5vh 5%;
   width: 90%;
-  height: 72.5vh;
+  height: 65vh;
+}
+
+.vue-radial-menu-container {
+  border: 1px solid #000000
 }
 
 .vue-radial-menu-item {
