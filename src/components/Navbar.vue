@@ -11,7 +11,7 @@
   </div>
 
   <radial-menu
-    style="margin: auto; position: absolute; top: 85vh; left: 50%; background-color: white; z-index: 1000; margin-left: -25px; cursor: pointer;"
+    style="margin: auto; position: absolute; top: 84.5vh; left: 50%; background-color: white; z-index: 1000; margin-left: -25px; cursor: pointer;"
     :itemSize="50"
     :radius="120"
     :angle-restriction="180"
@@ -26,7 +26,7 @@
   </radial-menu>
 
   <radial-menu
-    style="margin: auto; position: absolute; top: 85vh; left: 50%; background-color: white; z-index: 1000; margin-left: -25px; cursor: pointer;"
+    style="margin: auto; position: absolute; top: 84.5vh; left: 50%; background-color: white; z-index: 1000; margin-left: -25px; cursor: pointer;"
     :itemSize="50"
     :radius="120"
     :angle-restriction="180"
