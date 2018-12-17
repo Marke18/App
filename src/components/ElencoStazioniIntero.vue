@@ -1,7 +1,8 @@
 <template>
 
 <div class="home">
-  <elenco-stazioni v-for="station in stations" :nomeGestore="nomeGestore" :stations="station" v-bind:key="station.id"></elenco-stazioni>
+  <elenco-stazioni :nomeGestore="nomeGestore" :stations="stations[indiceStazione]" v-if="nomeGestore !== ''"></elenco-stazioni>
+  <elenco-stazioni v-for="station in stations" :nomeGestore="nomeGestore" :stations="station" v-bind:key="station.id" v-else></elenco-stazioni>
 </div>
 
 </template>
@@ -10,7 +11,7 @@
 
 export default {
   name: 'ElencoStazioniIntero',
-  props: ['stations', 'nomeGestore']
+  props: ['stations', 'nomeGestore', 'indiceStazione']
 }
 
 </script>

@@ -35,7 +35,7 @@ export default {
   methods: {
     Gestore () {
       window.app.nomeGestore = this.manager.nome
-      window.app.body = 'ElencoStazioni'
+      window.app.body = 'ElencoStazioniIntero'
     }
   }
 }

@@ -2,7 +2,7 @@
 
 <div class="home text-center">
   <b-form @submit="Recupera()">
-    <h2 style="margin-bottom: 10vh;"> Recupera il tuo account</h2>
+    <h3 style="margin-bottom: 10vh;"> Recupera il tuo account</h3>
 
     <b-form-group id="email"
                   label="Inserisci il tuo inidrizzo email di recupero:"

@@ -1,7 +1,7 @@
 <template>
 
 <div class="home">
-  <h2 class="text-center" style="margin-bottom: 10vh;">Dettaglio</h2>
+  <h3 class="text-center" style="margin-bottom: 10vh;">Dettaglio</h3>
 
   <b-container>
     <b-row>

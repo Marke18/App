@@ -7,19 +7,15 @@
   </head>
   <body>
     <div id="app">
-
-      <!-- Menu -->
-      <navbar :body.sync="body" :user.sync="user" :nome-gestore.sync="nomeGestore"></navbar>
-
-      <div style="margin: 0 1.5vh 0 1.5vh; height: 77.5vh;">
+      <div style="width: 100%; height: 100vh; padding: 0 0 127.5px 0;">
+        <!-- Area -->
+        <navbar :body.sync="body" :user.sync="user" :nome-gestore.sync="nomeGestore"></navbar>
 
         <home v-show="body === 'Home'" :managers="managers" :nome-gestore.sync="nomeGestore" :body.sync="body"></home>
 
         <elenco-gestori :managers="managers" v-show="body === 'ElencoGestori'"></elenco-gestori>
 
-        <elenco-stazioni-intero :stations="stations" :nome-gestore="nomeGestore" v-show="body === 'ElencoStazioniIntero'"></elenco-stazioni-intero>
-
-        <elenco-stazioni :stations="stations[indiceStazione]" :nome-gestore="nomeGestore"  v-show="body === 'ElencoStazioni'"></elenco-stazioni>
+        <elenco-stazioni-intero :stations="stations" :nome-gestore="nomeGestore" :indice-stazione="indiceStazione" v-show="body === 'ElencoStazioniIntero'"></elenco-stazioni-intero>
 
         <dettaglio :station-d="stationD" :user="user" :account="account" :codice-colonna="codiceColonna" :body.sync="body" :nome-gestore.sync="nomeGestore" v-show="body === 'Dettaglio' || body === 'DettaglioMappa'"></dettaglio>
 
@@ -40,8 +36,8 @@
         <dettaglio-ricarica :dettaglio="dettaglioR" v-show="body === 'DettaglioRicarica'"></dettaglio-ricarica>
 
         <dettaglio-movimento :dettaglio="dettaglioM" v-show="body === 'DettaglioMovimento'"></dettaglio-movimento>
-
       </div>
+
     </div>
     <p id="footer" :style="Style">{{link}}</p>
   </body>

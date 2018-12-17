@@ -3,7 +3,7 @@
 <div class="home">
 
   <b-form @submit="onSubmit" style="margin: 0 5%;" v-if="show">
-    <h1 class="text-center" style="margin:3vh 0 6vh 0;">Registrati</h1>
+    <h3 class="text-center" style="margin:3vh 0 6vh 0;">Registrati</h3>
 
     <b-form-group id="nome"
                   label="Nome:"

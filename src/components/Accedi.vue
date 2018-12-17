@@ -3,7 +3,7 @@
 <div class="home text-center">
 
   <b-form @submit="bodyHome()">
-    <h1 style="margin:4.5vh 0 8vh 0;">Accedi</h1>
+    <h3 style="margin:4.5vh 0 8vh 0;">Accedi</h3>
     <b-form-group id="username"
                   label="Username:"
                   label-for="usernameI"
