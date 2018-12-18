@@ -87,7 +87,7 @@ new Vue({
     Style: {
       width: '100%',
       textAlign: 'center',
-      position: 'absolute',
+      position: 'fixed',
       bottom: '0',
       textDecoration: 'underline',
       fontSize: '9px',

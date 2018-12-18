@@ -11,7 +11,7 @@
   </div>
 
   <radial-menu
-    style="margin: auto; position: absolute; bottom: 45px; left: 50%; background-color: white; z-index: 402; margin: -25px 0 -25px -25px; cursor: pointer;"
+    style="margin: auto; position: fixed; bottom: 45px; left: 50%; background-color: white; z-index: 402; margin: -25px 0 -25px -25px; cursor: pointer;"
     :itemSize="50"
     :radius="120"
     :angle-restriction="180"
@@ -26,7 +26,7 @@
   </radial-menu>
 
   <radial-menu
-    style="margin: auto; position: absolute; bottom: 45px; left: 50%; background-color: white; z-index: 402; margin: -25px 0 -25px -25px; cursor: pointer;"
+    style="margin: auto; position: fixed; bottom: 45px; left: 50%; background-color: white; z-index: 402; margin: -25px 0 -25px -25px; cursor: pointer;"
     :itemSize="50"
     :radius="120"
     :angle-restriction="180"
@@ -117,6 +117,8 @@ export default {
   margin: 0 0 5px 0;
   background: #007bff url('../assets/menu.png') no-repeat;
   z-index: 401;
+  position: sticky;
+  top: 0;
 }
 
 .home {
