@@ -1,50 +1,93 @@
 <template>
 
 <div class="home">
-  <h3 class="text-center" style="margin-bottom: 10vh;">Dettaglio</h3>
+  <div style="margin: 0 5%;">
+    <b-form>
+      <h4 class="text-center" style="margin:3vh 0 6vh 0;">
+        Dettaglio
+      </h4>
+      <b-form-group id="ID"
+                    label="ID Prenotazione:"
+                    label-for="IDI">
+        <b-form-input id="IDI"
+                      class="input"
+                      v-model="dettaglio.id_prenotazione"
+                      readonly>
+        </b-form-input>
+      </b-form-group>
 
-  <b-container>
-    <b-row>
-      <b-col cols="6">ID Prenotazione:</b-col>
-      <b-col>{{dettaglio.id_prenotazione}}</b-col>
-    </b-row>
+      <b-form-group id="servizio"
+                    label="Servizio:"
+                    label-for="servizioI">
+        <b-form-input id="servizioI"
+                      class="input"
+                      v-model="dettaglio.servizio"
+                      readonly>
+        </b-form-input>
+      </b-form-group>
 
-    <b-row>
-      <b-col cols="6">Servizio:</b-col>
-      <b-col>{{dettaglio.servizio}}</b-col>
-    </b-row>
+      <b-form-group id="Data"
+                    label="Data:"
+                    label-for="dataI">
+        <b-form-input id="dataI"
+                      class="input"
+                      v-model="dettaglio.data"
+                      readonly>
+        </b-form-input>
+      </b-form-group>
 
-    <b-row>
-      <b-col cols="6">Data:</b-col>
-      <b-col>{{dettaglio.data}}</b-col>
-    </b-row>
+      <b-form-group id="oraIn"
+                    label="Ora inizio:"
+                    label-for="oraInI">
+        <b-form-input id="oraInI"
+                      class="input"
+                      v-model="dettaglio.oraIn"
+                      readonly>
+        </b-form-input>
+      </b-form-group>
 
-    <b-row>
-      <b-col cols="6">Ora Inizio:</b-col>
-      <b-col>{{dettaglio.oraIn}}</b-col>
-    </b-row>
+      <b-form-group id="oraFin"
+                    label="Ora fine:"
+                    label-for="oraFinI">
+        <b-form-input id="oraFinI"
+                      class="input"
+                      v-model="dettaglio.oraFin"
+                      readonly>
+        </b-form-input>
+      </b-form-group>
 
-    <b-row>
-      <b-col cols="6">Ora Fine:</b-col>
-      <b-col>{{dettaglio.oraFin}}</b-col>
-    </b-row>
+      <b-form-group id="prelievo"
+                    label="Prelievo:"
+                    label-for="prelievoI">
+        <b-form-input id="prelievoI"
+                      class="input"
+                      v-model="dettaglio.prelievo"
+                      readonly>
+        </b-form-input>
+      </b-form-group>
 
-    <b-row>
-      <b-col cols="6">Prelievo:</b-col>
-      <b-col>{{dettaglio.prelievo}}</b-col>
-    </b-row>
+      <b-form-group id="consegna"
+                    label="Consegna:"
+                    label-for="consegnaI">
+        <b-form-input id="consegnaI"
+                      class="input"
+                      v-model="dettaglio.consegna"
+                      readonly>
+        </b-form-input>
+      </b-form-group>
 
-    <b-row>
-      <b-col cols="6">Consegna:</b-col>
-      <b-col>{{dettaglio.consegna}}</b-col>
-    </b-row>
+      <b-form-group id="costo"
+                    label="Costo:"
+                    label-for="costoI">
+        <b-form-input id="costoI"
+                      class="input"
+                      v-model="dettaglio.costo"
+                      readonly>
+        </b-form-input>
+      </b-form-group>
 
-    <b-row>
-      <b-col cols="6">Costo:</b-col>
-      <b-col>{{dettaglio.costo}}</b-col>
-    </b-row>
-  </b-container>
-
+    </b-form>
+  </div>
 </div>
 
 </template>

@@ -2,7 +2,7 @@
 
 <div class="home">
   <div v-if="!conferma">
-    <h5 class="text-center" style="margin: 5vh 0;"> Dettaglio Ciclo-Stazione </h5>
+    <h5 class="text-center" style="margin: 2.5vh 0;"> Dettaglio Ciclo-Stazione </h5>
     <div style="margin: 2vh 0;">
 
       <b-container class="bv-example-row">

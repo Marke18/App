@@ -2,7 +2,7 @@
 
 <div class="home text-center">
 
-  <b-form @submit="bodyHome()">
+  <b-form>
     <h3 style="margin: 4.5vh 0 8vh 0;">Accedi</h3>
     <b-form-group id="username"
                   label="Username:"
@@ -29,7 +29,7 @@
                     placeholder="Inserisci la tua password">
       </b-form-input>
     </b-form-group>
-    <b-button type="submit">Accedi</b-button>
+    <b-button type="submit" @click="bodyHome()">Accedi</b-button>
   </b-form>
 
   <div style="text-align:left;margin-top:5vh">

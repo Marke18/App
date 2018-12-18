@@ -2,7 +2,10 @@
 
 <div class="home">
   <swipe class="my-swipe" auto="0" ref="mySwipe">
-
+    <h4 class="text-center" style="margin:3vh 0 2vh 0;">
+      Statistiche
+      <img src="../assets/stat.png" width="30">
+    </h4>
     <swipe-item>
       <p class="tit">
         <img src="../assets/arrow_left.png" width="15" style="margin:0 5px 2.5px 0;cursor: pointer;" @click="goto(1)">

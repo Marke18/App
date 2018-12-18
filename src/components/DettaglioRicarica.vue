@@ -1,35 +1,63 @@
 <template>
 
 <div class="home">
-  <h3 class="text-center" style="margin-bottom: 10vh;">Dettaglio</h3>
+  <div style="margin: 0 5%;">
+    <b-form>
+      <h4 class="text-center" style="margin:3vh 0 6vh 0;">
+        Dettaglio
+      </h4>
+      <b-form-group id="ID"
+                    label="ID Prenotazione:"
+                    label-for="IDI">
+        <b-form-input id="IDI"
+                      class="input"
+                      v-model="dettaglio.id_prenotazione"
+                      readonly>
+        </b-form-input>
+      </b-form-group>
 
-  <b-container>
-    <b-row>
-      <b-col cols="6">ID Prenotazione:</b-col>
-      <b-col>{{dettaglio.id_prenotazione}}</b-col>
-    </b-row>
+      <b-form-group id="taglio"
+                    label="Taglio:"
+                    label-for="taglioI">
+        <b-form-input id="taglioI"
+                      class="input"
+                      v-model="dettaglio.taglio"
+                      readonly>
+        </b-form-input>
+      </b-form-group>
 
-    <b-row>
-      <b-col cols="6">Taglio:</b-col>
-      <b-col>{{dettaglio.taglio}}</b-col>
-    </b-row>
+      <b-form-group id="data"
+                    label="Data:"
+                    label-for="dataI">
+        <b-form-input id="dataI"
+                      class="input"
+                      v-model="dettaglio.data"
+                      readonly>
+        </b-form-input>
+      </b-form-group>
 
-    <b-row>
-      <b-col cols="6">Data:</b-col>
-      <b-col>{{dettaglio.data}}</b-col>
-    </b-row>
+      <b-form-group id="ora"
+                    label="Ora:"
+                    label-for="oraI">
+        <b-form-input id="oraI"
+                      class="input"
+                      v-model="dettaglio.ora"
+                      readonly>
+        </b-form-input>
+      </b-form-group>
 
-    <b-row>
-      <b-col cols="6">Ora:</b-col>
-      <b-col>{{dettaglio.ora}}</b-col>
-    </b-row>
+      <b-form-group id="circuito"
+                    label="Circuito:"
+                    label-for="circuitoI">
+        <b-form-input id="circuitoI"
+                      class="input"
+                      v-model="dettaglio.circuito"
+                      readonly>
+        </b-form-input>
+      </b-form-group>
 
-    <b-row>
-      <b-col cols="6">Circuito:</b-col>
-      <b-col>{{dettaglio.circuito}}</b-col>
-    </b-row>
-  </b-container>
-
+    </b-form>
+  </div>
 </div>
 
 </template>

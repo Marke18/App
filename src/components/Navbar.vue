@@ -1,14 +1,5 @@
 <template>
 <div>
-  <div class="head">
-
-    <div class="freccia" v-if="body === 'Dettaglio' || body === 'DettaglioMovimento' || body === 'DettaglioRicarica' || body === 'DettaglioMappa'">
-      <a href="#" @click="Torna()">
-        <img src="../assets/arrow_left.png" width="30" height="30" alt="BV">
-      </a>
-    </div>
-
-  </div>
 
   <radial-menu
     style="margin: auto; position: fixed; bottom: 45px; left: 50%; background-color: white; z-index: 402; margin: -25px 0 -25px -25px; cursor: pointer;"
@@ -40,6 +31,13 @@
       </radial-menu-item>
   </radial-menu>
 
+  <div class="vue-radial-menu-container"
+       style="width: 50px; height: 50px; margin: auto; position: fixed; bottom: 45px; left: 50%; background-color: white; z-index: 402; margin: -25px 0 -25px -25px; cursor: pointer;"
+       v-show="body === 'Dettaglio' || body === 'DettaglioMovimento' || body === 'DettaglioRicarica' || body === 'DettaglioMappa'"
+       @click="Torna()">
+    <img src="../assets/arrow_left.png" width="30" height="30" alt="BV">
+  </div>
+
 </div>
 </template>
 
@@ -62,9 +60,7 @@ export default {
   },
   methods: {
     Torna () {
-      if (this.body === 'Dettaglio' && this.nomeGestore !== '') {
-        this.$emit('update:body', 'ElencoStazioni')
-      } else if (this.body === 'Dettaglio' && this.nomeGestore === '') {
+      if (this.body === 'Dettaglio') {
         this.$emit('update:body', 'ElencoStazioniIntero')
       } else {
         this.$emit('update:body', 'Statistiche')
@@ -125,7 +121,6 @@ export default {
   width: 90%;
   height: 100%;
   margin: 0 5%;
-  overflow: scroll;
 }
 
 .vue-radial-menu-container {
@@ -136,13 +131,6 @@ export default {
   font-size: 10px;
   text-align: center;
   border: 1px solid #000000;
-}
-
-.freccia {
-  cursor: pointer;
-  right: 15px;
-  position: absolute;
-  top: 11px;
 }
 
 </style>

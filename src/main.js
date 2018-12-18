@@ -95,7 +95,7 @@ new Vue({
       color: '#FFFFFF',
       margin: '0',
       padding: '2px',
-      zIndex: 401
+      zIndex: '401'
     }
   }
 })
@@ -196,22 +196,22 @@ window.app = new Vue({
       ]
     ],
     movements: [
-      {servizio: 'a', id_prenotazione: 'a', data: 'a', oraIn: 'a', oraFin: 'a', prelievo: 'a', consegna: 'a', costo: 'a'},
-      {servizio: 'a', id_prenotazione: 'a', data: 'a', oraIn: 'a', oraFin: 'a', prelievo: 'a', consegna: 'a', costo: 'a'},
-      {servizio: 'a', id_prenotazione: 'a', data: 'a', oraIn: 'a', oraFin: 'a', prelievo: 'a', consegna: 'a', costo: 'a'},
-      {servizio: 'a', id_prenotazione: 'a', data: 'a', oraIn: 'a', oraFin: 'a', prelievo: 'a', consegna: 'a', costo: 'a'},
-      {servizio: 'a', id_prenotazione: 'a', data: 'a', oraIn: 'a', oraFin: 'a', prelievo: 'a', consegna: 'a', costo: 'a'},
-      {servizio: 'a', id_prenotazione: 'a', data: 'a', oraIn: 'a', oraFin: 'a', prelievo: 'a', consegna: 'a', costo: 'a'},
-      {servizio: 'a', id_prenotazione: 'a', data: 'a', oraIn: 'a', oraFin: 'a', prelievo: 'a', consegna: 'a', costo: 'a'},
-      {servizio: 'a', id_prenotazione: 'a', data: 'a', oraIn: 'a', oraFin: 'a', prelievo: 'a', consegna: 'a', costo: 'a'},
-      {servizio: 'a', id_prenotazione: 'a', data: 'a', oraIn: 'a', oraFin: 'a', prelievo: 'a', consegna: 'a', costo: 'a'},
-      {servizio: 'a', id_prenotazione: 'a', data: 'a', oraIn: 'a', oraFin: 'a', prelievo: 'a', consegna: 'a', costo: 'a'},
-      {servizio: 'a', id_prenotazione: 'a', data: 'a', oraIn: 'a', oraFin: 'a', prelievo: 'a', consegna: 'a', costo: 'a'},
-      {servizio: 'a', id_prenotazione: 'a', data: 'a', oraIn: 'a', oraFin: 'a', prelievo: 'a', consegna: 'a', costo: 'b'}
+      {servizio: 'ebike', id_prenotazione: '462346256', data: 'XX/XX/XXXX', oraIn: '12:00', oraFin: '16:00', prelievo: '12:15', consegna: '15:45', costo: '15'},
+      {servizio: 'ebike', id_prenotazione: '623462346', data: 'XX/XX/XXXX', oraIn: '12:00', oraFin: '16:00', prelievo: '12:15', consegna: '15:45', costo: '15'},
+      {servizio: 'ebike', id_prenotazione: '543345455', data: 'XX/XX/XXXX', oraIn: '12:00', oraFin: '16:00', prelievo: '12:15', consegna: '15:45', costo: '15'},
+      {servizio: 'ebike', id_prenotazione: '523456234', data: 'XX/XX/XXXX', oraIn: '12:00', oraFin: '16:00', prelievo: '12:15', consegna: '15:45', costo: '15'},
+      {servizio: 'ebike', id_prenotazione: '432613461', data: 'XX/XX/XXXX', oraIn: '12:00', oraFin: '16:00', prelievo: '12:15', consegna: '15:45', costo: '15'},
+      {servizio: 'ebike', id_prenotazione: '513466775', data: 'XX/XX/XXXX', oraIn: '12:00', oraFin: '16:00', prelievo: '12:15', consegna: '15:45', costo: '15'},
+      {servizio: 'ebike', id_prenotazione: '234234324', data: 'XX/XX/XXXX', oraIn: '12:00', oraFin: '16:00', prelievo: '12:15', consegna: '15:45', costo: '15'},
+      {servizio: 'ebike', id_prenotazione: '243242344', data: 'XX/XX/XXXX', oraIn: '12:00', oraFin: '16:00', prelievo: '12:15', consegna: '15:45', costo: '15'},
+      {servizio: 'ebike', id_prenotazione: '432423422', data: 'XX/XX/XXXX', oraIn: '12:00', oraFin: '16:00', prelievo: '12:15', consegna: '15:45', costo: '15'},
+      {servizio: 'ebike', id_prenotazione: '654856834', data: 'XX/XX/XXXX', oraIn: '12:00', oraFin: '16:00', prelievo: '12:15', consegna: '15:45', costo: '15'},
+      {servizio: 'ebike', id_prenotazione: '534534778', data: 'XX/XX/XXXX', oraIn: '12:00', oraFin: '16:00', prelievo: '12:15', consegna: '15:45', costo: '15'},
+      {servizio: 'ebike', id_prenotazione: '527634738', data: 'XX/XX/XXXX', oraIn: '12:00', oraFin: '16:00', prelievo: '12:15', consegna: '15:45', costo: '15'}
     ],
     recharges: [
-      {id_prenotazione: 'a', taglio: 'a', data: 'a', ora: '12:00', circuito: 'a'},
-      {id_prenotazione: 'a', taglio: 'a', data: 'a', ora: '12:00', circuito: 'c'}
+      {id_prenotazione: '527634738', taglio: '20', data: 'XX/XX/XXXX', ora: '12:00', circuito: 'Comunità Val di Sole'},
+      {id_prenotazione: '342363477', taglio: '30', data: 'XX/XX/XXXX', ora: '12:00', circuito: 'Comunità Val di Sole'}
     ]
   },
   computed: {

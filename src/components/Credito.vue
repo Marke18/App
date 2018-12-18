@@ -3,9 +3,13 @@
 <div class="home" style="margin: 2.5vh 10%; width: 80%;">
 
   <b-form @submit="updateCredito">
+    <h4 class="text-center" style="margin:3vh 0 6vh 0;">
+      Credito
+      <img src="../assets/euro.png" width="30" height="30" alt="BV">
+    </h4>
 
     <div style="font-weight: bold;margin-bottom:4vh;">
-      <b-container class="bv-example-row" style="margin: 0 0 6vh 0;">
+      <b-container class="bv-example-row" style="margin: 0 0 4vh 0;">
         <b-row>
           <b-col cols="8" style="padding:0">Credito residuo</b-col>
           <b-col cols="4">€ {{credito}}</b-col>
