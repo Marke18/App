@@ -12,7 +12,7 @@
         Movimenti effettuati
         <img src="../assets/arrow_right.png" width="15" style="margin:0 0 2.5px 5px;cursor: pointer;" @click="goto(1)">
       </p>
-      <div style="margin-bottom:5px;width:100%;height: 85%;overflow: scroll;">
+      <div style="margin-bottom:5px;width:100%;height: 60%;overflow: scroll;">
           <b-container class="bv-example-row text-center" style="width:100%;font-size: 10px;font-weight: bold;">
             <b-list-group>
               <b-list-group-item active class="flex-column align-items-start">
@@ -34,7 +34,7 @@
         Ricariche effettuate
         <img src="../assets/arrow_right.png" width="15" style="margin:0 0 2.5px 5px;cursor: pointer;" @click="goto(0)">
       </p>
-      <div style="margin-bottom:5px;width:100%;height: 85%;overflow: scroll;">
+      <div style="margin-bottom:5px;width:100%;height: 60%;overflow: scroll;">
         <b-container class="bv-example-row text-center" style="width:100%;font-size: 10px;font-weight: bold;">
           <b-list-group>
             <b-list-group-item active class="flex-column align-items-start">
