@@ -10,7 +10,7 @@
       <radial-menu-item
         v-for="(item, index) in items"
         :key="index"
-        style="background-color: white"
+        style="background-color: white;"
         @click="() => handleClick(item)">
           <span>{{item}}</span>
       </radial-menu-item>
@@ -128,7 +128,7 @@ export default {
 }
 
 .vue-radial-menu-item {
-  font-size: 10px;
+  font-size: 10px !important;
   text-align: center;
   border: 1px solid #000000;
 }
