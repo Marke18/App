@@ -1,0 +1,27 @@
+version: "3.7"
+services:
+
+  database:
+    image: mysql:5.7
+    container_name: database
+    volumes:
+      - data:/var/lib/mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: admin
+      MYSQL_DATABASE: admin
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: admin
+
+  web:
+    # replace username/repo:tag with your name and image details
+    image: marke18/app:ecospazio
+    container_name: ecospazio
+    ports:
+      - "8080:8080"
+    links:
+      - database:db
+
+volumes:
+  data:
+    external: true
