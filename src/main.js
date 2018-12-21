@@ -108,21 +108,48 @@ window.app = new Vue({
   data () {
     axios.get('http://0.0.0.0:3000/account.json')
       .then((response) => {
-        // handle success
-        console.log(response.data)
-        console.log(this.account)
         this.account = Object.assign({}, this.account, response.data)
-        console.log(this.account)
       })
       .catch(function (error) {
-        // handle error
         console.log(error)
-        this.account = {}
       })
+
+    axios.get('http://0.0.0.0:3000/managers.json')
+      .then((response) => {
+        this.managers = Object.assign({}, this.managers, response.data)
+      })
+      .catch(function (error) {
+        console.log(error)
+      })
+
+    axios.get('http://0.0.0.0:3000/movements.json')
+      .then((response) => {
+        this.movements = Object.assign({}, this.movements, response.data)
+      })
+      .catch(function (error) {
+        console.log(error)
+      })
+
+    axios.get('http://0.0.0.0:3000/recharges.json')
+      .then((response) => {
+        this.recharges = Object.assign({}, this.recharges, response.data)
+      })
+      .catch(function (error) {
+        console.log(error)
+      })
+
+    axios.get('http://0.0.0.0:3000/stations.json')
+      .then((response) => {
+        this.stations = Object.assign({}, this.stations, response.data)
+      })
+      .catch(function (error) {
+        console.log(error)
+      })
+
     return {
       body: 'Home',
       user: '',
-      account: {nome: 'lulu'},
+      account: {},
       codiceColonna: '1234567890',
       nomeGestore: '',
       dettaglioR: {},

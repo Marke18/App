@@ -14,7 +14,6 @@ services:
     build:
       context: .
       target:  dev-stage
-    container_name: ecospazio
     volumes:
       - ./:/usr/share/nginx/html
     ports:
