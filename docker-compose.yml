@@ -10,14 +10,18 @@ services:
       - "3000:80"
 
   web:
-    # replace username/repo:tag with your name and image details
     build:
-      context: .
+      context: ./
       target:  dev-stage
     volumes:
       - ./:/usr/share/nginx/html
+      - ./:/bindmount:rw
+      - node_modules:/src/node_modules
     ports:
-      - "8080:80"
+      - "8080:8080"
     links:
       - database
     command: npm run dev
+
+volumes:
+  node_modules:

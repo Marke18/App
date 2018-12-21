@@ -1,10 +1,11 @@
  #dev stage
- FROM node:9.11.1-alpine as dev-stage
- WORKDIR /app
- COPY package*.json ./
- RUN npm install
- COPY . .
+ FROM node:latest as dev-stage
+ EXPOSE 8080
+ WORKDIR /bindmount
+ COPY package-lock.json package.json ./
+ RUN npm install --no-progress --ignore-optional
 
+ CMD npm run start:dev     # webpack-dev-server --host 0.0.0.0 --hot
 # build stage
 FROM dev-stage as build-stage
 # RUN echo "PRIMA DI BUILD"
