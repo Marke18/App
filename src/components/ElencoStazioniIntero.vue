@@ -11,7 +11,21 @@
 
 export default {
   name: 'ElencoStazioniIntero',
-  props: ['stations', 'nomeGestore', 'indiceStazione']
+  props: ['stations', 'nomeGestore'],
+  computed: {
+    indiceStazione () {
+      var i
+      if (this.nomeGestore !== '') {
+        i = 0
+        while (this.stations[i].nomeG !== this.nomeGestore) {
+          if (this.nomeGestore === this.stations[i][0].nomeG) {
+            return i
+          }
+          i++
+        }
+      }
+    }
+  }
 }
 
 </script>

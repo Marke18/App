@@ -149,26 +149,17 @@ window.app = new Vue({
     return {
       body: 'Home',
       user: '',
-      account: {},
       codiceColonna: '1234567890',
       nomeGestore: '',
+      account: {},
       dettaglioR: {},
       dettaglioM: {},
       stationD: {},
       managers: [],
       stations: [],
       movements: [],
+      tuc: [[0, 2], [0, 5]],
       recharges: []
-    }
-  },
-  computed: {
-    indiceStazione () {
-      var i
-      for (i = 0; i < this.stations.length; i++) {
-        if (this.nomeGestore === this.stations[i][0].nomeG) {
-          return i
-        }
-      }
     }
   }
 })

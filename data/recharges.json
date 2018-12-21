@@ -1,2 +1,4 @@
-{"id_prenotazione":"527634738", "taglio": 20, "data": "XX/XX/XXXX", "ora": "12:00", "circuito": "Comunità Val di Sole"},
-{"id_prenotazione":"527634738", "taglio": 20, "data": "XX/XX/XXXX", "ora": "12:00", "circuito": "Comunità Val di Sole"}
+[
+  {"id_prenotazione":"527634738", "taglio": 20, "data": "XX/XX/XXXX", "ora": "12:00", "circuito": "Comunità Val di Sole"},
+  {"id_prenotazione":"527634738", "taglio": 20, "data": "XX/XX/XXXX", "ora": "12:00", "circuito": "Comunità Val di Sole"}
+]
