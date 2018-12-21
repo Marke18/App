@@ -158,7 +158,6 @@ window.app = new Vue({
       managers: [],
       stations: [],
       movements: [],
-      tuc: [[0, 2], [0, 5]],
       recharges: []
     }
   }

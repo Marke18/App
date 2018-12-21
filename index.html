@@ -16,7 +16,7 @@
 
         <elenco-gestori :managers="managers" v-show="body === 'ElencoGestori'"></elenco-gestori>
 
-        <elenco-stazioni-intero :stations="stations" :nome-gestore="nomeGestore" :indice-stazione="indiceStazione" v-show="body === 'ElencoStazioniIntero'"></elenco-stazioni-intero>
+        <elenco-stazioni-intero :stations="stations" :nome-gestore="nomeGestore" v-show="body === 'ElencoStazioniIntero'"></elenco-stazioni-intero>
 
         <dettaglio :station-d="stationD" :user="user" :account="account" :codice-colonna="codiceColonna" :body.sync="body" :nome-gestore.sync="nomeGestore" v-show="body === 'Dettaglio' || body === 'DettaglioMappa'"></dettaglio>
 
