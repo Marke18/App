@@ -27,6 +27,11 @@
 
 export default {
   name: 'Recupera',
+  data () {
+    return {
+      email: ''
+    }
+  },
   props: ['body'],
   methods: {
     Recupera () {

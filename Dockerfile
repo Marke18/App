@@ -7,11 +7,11 @@
 
 # build stage
 FROM dev-stage as build-stage
-#RUN echo "PRIMA DI BUILD"
-#RUN ls -l /app
+# RUN echo "PRIMA DI BUILD"
+# RUN ls -l /app
 RUN npm run build
-#RUN echo "DOPO BUILD"
-#RUN ls -l /app/dist
+# RUN echo "DOPO BUILD"
+# RUN ls -l /app/dist
 
 # production stage
 FROM nginx:1.13.12-alpine as production-stage

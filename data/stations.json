@@ -1,0 +1,52 @@
+[
+  {
+    "nomeG": "Comunità Val di Sole",
+    "nomeST": "Molè",
+    "ciclo": "In Linea",
+    "via": "Via 4 Novembre",
+    "postiTot": 8,
+    "postiDisp": 6,
+    "ebike": 2,
+    "preseAuto": 0,
+    "posto": ["Bike pubblica elettrica", "Bike pubblica elettrica"],
+    "stato": ["Carica", "Carica"]
+  },
+  {
+    "nomeG": "Comunità Val di Sole",
+    "nomeST": "Mezzana",
+    "ciclo": "In Linea",
+    "via": "Via per Marileva",
+    "postiTot": 8,
+    "postiDisp": 5,
+    "ebike": 2,
+    "preseAuto": 0,
+    "posto": ["Bike pubblica normale", "Bike pubblica elettrica"],
+    "stato": ["Non elettrica", "Fuori servizio"]
+  }
+],
+[
+  {
+    "nomeG": "Comune di Riva del Garda",
+    "nomeST": "Pingu",
+    "ciclo": "In Linea",
+    "via": "Via per Marileva",
+    "postiTot": 8,
+    "postiDisp": 6,
+    "ebike": 2,
+    "preseAuto": 0,
+    "posto": ["Bike pubblica normale", "Bike pubblica elettrica", "Ricarica bike privata", "Ricarica bike pubblica o privata", "Ricarica veicolo elettrico"],
+    "stato": ["Non elettrica", "Carica", "In carica", "Fuori servizio", "Prenotato"]
+  },
+  {
+    "nomeG": "Comune di Riva del Garda",
+    "nomeST": "Lollo",
+    "ciclo": "In Linea",
+    "via": "Via per Marileva",
+    "postiTot": 8,
+    "postiDisp": 6,
+    "ebike": 2,
+    "preseAuto": 0,
+    "posto": ["Bike pubblica normale", "Bike pubblica elettrica", "Ricarica bike privata", "Ricarica bike pubblica o privata", "Ricarica veicolo elettrico"],
+    "stato": ["Non elettrica", "Carica", "In carica", "Fuori servizio", "Prenotato"]
+  }
+]

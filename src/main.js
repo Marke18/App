@@ -100,119 +100,39 @@ new Vue({
   }
 })
 
+const axios = require('axios')
+
 // eslint-disable-next-line
 window.app = new Vue({
   el: '#app',
-  data: {
-    body: 'Home',
-    user: '',
-    account: {
-      nome: 'Filippo',
-      cognome: 'Luzzi',
-      dataNascita: 'XX/XX/XXXX',
-      luogoNascita: 'Rovereto',
-      nazionalita: 'Italiana',
-      cf: 'XXXXXXXXXXXXXXXX',
-      tipoDoc: "Carta d'identità",
-      nDoc: 'XX XXXXXXX',
-      indResidenza: 'Rovereto',
-      cell: 'XXX XXXXXXX',
-      email: 'nome.cognome@gmail.com',
-      gestore: 'Gestore1',
-      contratto: 'Contratto1',
-      username: 'Luzzi01',
-      password: 'lollo87',
-      credito: 10
-    },
-    codiceColonna: '1234567890',
-    nomeGestore: '',
-    dettaglioR: {},
-    dettaglioM: {},
-    stationD: {
-      nomeG: '',
-      nomeST: '',
-      ciclo: '',
-      via: '',
-      postiTot: 0,
-      postiDisp: 0,
-      ebike: 0
-    },
-    managers: [
-      {nome: 'Comunità Val di Sole', stazioni: 4, ricaricaBike: 0, ricaricaCar: 0, coord: [45.584829, 10.441879]},
-      {nome: 'Comune di Riva del Garda', stazioni: 6, ricaricaBike: 0, ricaricaCar: 6, coord: [45.68724, 10.449841]}
-    ],
-    stations: [
-      [
-        {
-          nomeG: 'Comunità Val di Sole',
-          nomeST: 'Molè',
-          ciclo: 'IN LINEA',
-          via: 'Via 4 Novembre',
-          postiTot: 8,
-          postiDisp: 6,
-          ebike: 2,
-          preseAuto: 0,
-          posto: ['Bike pubblica elettrica', 'Bike pubblica elettrica'],
-          stato: ['Carica', 'Carica']
-        },
-        {
-          nomeG: 'Comunità Val di Sole',
-          nomeST: 'Mezzana',
-          ciclo: 'In Linea',
-          via: 'Via per Marileva',
-          postiTot: 8,
-          postiDisp: 5,
-          ebike: 2,
-          preseAuto: 0,
-          posto: ['Bike pubblica normale', 'Bike pubblica elettrica'],
-          stato: ['Non elettrica', 'Fuori servizio']
-        }
-      ],
-      [
-        {
-          nomeG: 'Comune di Riva del Garda',
-          nomeST: 'Pingu',
-          ciclo: 'In Linea',
-          via: 'Via per Marileva',
-          postiTot: 8,
-          postiDisp: 6,
-          ebike: 2,
-          preseAuto: 0,
-          posto: ['Bike pubblica normale', 'Bike pubblica elettrica', 'Ricarica bike privata', 'Ricarica bike pubblica o privata', 'Ricarica veicolo elettrico'],
-          stato: ['Non elettrica', 'Carica', 'In carica', 'Fuori servizio', 'Prenotato']
-        },
-        {
-          nomeG: 'Comune di Riva del Garda',
-          nomeST: 'Lollo',
-          ciclo: 'In Linea',
-          via: 'Via per Marileva',
-          postiTot: 8,
-          postiDisp: 6,
-          ebike: 2,
-          preseAuto: 0,
-          posto: ['Bike pubblica normale', 'Bike pubblica elettrica', 'Ricarica bike privata', 'Ricarica bike pubblica o privata', 'Ricarica veicolo elettrico'],
-          stato: ['Non elettrica', 'Carica', 'In carica', 'Fuori servizio', 'Prenotato']
-        }
-      ]
-    ],
-    movements: [
-      {servizio: 'ebike', id_prenotazione: '462346256', data: 'XX/XX/XXXX', oraIn: '12:00', oraFin: '16:00', prelievo: '12:15', consegna: '15:45', costo: '15'},
-      {servizio: 'ebike', id_prenotazione: '623462346', data: 'XX/XX/XXXX', oraIn: '12:00', oraFin: '16:00', prelievo: '12:15', consegna: '15:45', costo: '15'},
-      {servizio: 'ebike', id_prenotazione: '543345455', data: 'XX/XX/XXXX', oraIn: '12:00', oraFin: '16:00', prelievo: '12:15', consegna: '15:45', costo: '15'},
-      {servizio: 'ebike', id_prenotazione: '523456234', data: 'XX/XX/XXXX', oraIn: '12:00', oraFin: '16:00', prelievo: '12:15', consegna: '15:45', costo: '15'},
-      {servizio: 'ebike', id_prenotazione: '432613461', data: 'XX/XX/XXXX', oraIn: '12:00', oraFin: '16:00', prelievo: '12:15', consegna: '15:45', costo: '15'},
-      {servizio: 'ebike', id_prenotazione: '513466775', data: 'XX/XX/XXXX', oraIn: '12:00', oraFin: '16:00', prelievo: '12:15', consegna: '15:45', costo: '15'},
-      {servizio: 'ebike', id_prenotazione: '234234324', data: 'XX/XX/XXXX', oraIn: '12:00', oraFin: '16:00', prelievo: '12:15', consegna: '15:45', costo: '15'},
-      {servizio: 'ebike', id_prenotazione: '243242344', data: 'XX/XX/XXXX', oraIn: '12:00', oraFin: '16:00', prelievo: '12:15', consegna: '15:45', costo: '15'},
-      {servizio: 'ebike', id_prenotazione: '432423422', data: 'XX/XX/XXXX', oraIn: '12:00', oraFin: '16:00', prelievo: '12:15', consegna: '15:45', costo: '15'},
-      {servizio: 'ebike', id_prenotazione: '654856834', data: 'XX/XX/XXXX', oraIn: '12:00', oraFin: '16:00', prelievo: '12:15', consegna: '15:45', costo: '15'},
-      {servizio: 'ebike', id_prenotazione: '534534778', data: 'XX/XX/XXXX', oraIn: '12:00', oraFin: '16:00', prelievo: '12:15', consegna: '15:45', costo: '15'},
-      {servizio: 'ebike', id_prenotazione: '527634738', data: 'XX/XX/XXXX', oraIn: '12:00', oraFin: '16:00', prelievo: '12:15', consegna: '15:45', costo: '15'}
-    ],
-    recharges: [
-      {id_prenotazione: '527634738', taglio: '20', data: 'XX/XX/XXXX', ora: '12:00', circuito: 'Comunità Val di Sole'},
-      {id_prenotazione: '342363477', taglio: '30', data: 'XX/XX/XXXX', ora: '12:00', circuito: 'Comunità Val di Sole'}
-    ]
+  data () {
+    axios.get('http://0.0.0.0:3000/account.json')
+      .then((response) => {
+        // handle success
+        console.log(response.data)
+        console.log(this.account)
+        this.account = Object.assign({}, this.account, response.data)
+        console.log(this.account)
+      })
+      .catch(function (error) {
+        // handle error
+        console.log(error)
+        this.account = {}
+      })
+    return {
+      body: 'Home',
+      user: '',
+      account: {nome: 'lulu'},
+      codiceColonna: '1234567890',
+      nomeGestore: '',
+      dettaglioR: {},
+      dettaglioM: {},
+      stationD: {},
+      managers: [],
+      stations: [],
+      movements: [],
+      recharges: []
+    }
   },
   computed: {
     indiceStazione () {

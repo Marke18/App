@@ -2,26 +2,23 @@ version: "3.7"
 services:
 
   database:
-    image: mysql:5.7
-    container_name: database
+    build: data/.
     volumes:
-      - data:/var/lib/mysql
+      - ./data:/usr/share/nginx/html
     restart: always
-    environment:
-      MYSQL_ROOT_PASSWORD: admin
-      MYSQL_DATABASE: admin
-      MYSQL_USER: admin
-      MYSQL_PASSWORD: admin
+    ports:
+      - "3000:80"
 
   web:
     # replace username/repo:tag with your name and image details
-    image: marke18/app:ecospazio
+    build:
+      context: .
+      target:  dev-stage
     container_name: ecospazio
+    volumes:
+      - ./:/usr/share/nginx/html
     ports:
-      - "8080:8080"
+      - "8080:80"
     links:
-      - database:db
-
-volumes:
-  data:
-    external: true
+      - database
+    command: npm run dev

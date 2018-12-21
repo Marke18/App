@@ -1,0 +1,18 @@
+{
+  "nome": "Filippo",
+  "cognome": "Luzzi",
+  "dataNascita": "XX/XX/XXXX",
+  "luogoNascita": "Rovereto",
+  "nazionalita": "Italiana",
+  "cf": "XXXXXXXXXXXXXXXX",
+  "tipoDoc": "Carta d'identità",
+  "nDoc": "XX XXXXXXX",
+  "indResidenza": "Rovereto",
+  "cell": "XXX XXXXXXX",
+  "email": "nome.cognome@gmail.com",
+  "gestore": "Gestore1",
+  "contratto": "Contratto1",
+  "username": "Luzzi01",
+  "password": "lollo87",
+  "credito": 10
+}

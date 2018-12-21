@@ -7,7 +7,7 @@
   </head>
   <body>
     <div id="app">
-      <div class="head"></div>
+      <div class="head">{{account.nome}}</div>
       <div style="width: 100%; position: fixed; bottom: 72.5px; top: 55px;overflow: scroll;">
         <!-- Area -->
         <navbar :body.sync="body" :user.sync="user" :nome-gestore.sync="nomeGestore"></navbar>
